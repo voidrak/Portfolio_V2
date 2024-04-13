@@ -1,7 +1,6 @@
-"use client";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
-import { cn } from "src/utils/cn.js";
+import { cn } from "../../utils/cn";
 import {
   IconBrightnessDown,
   IconBrightnessUp,
@@ -23,7 +22,6 @@ import { IconWorld } from "@tabler/icons-react";
 import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
-import Image from "next/image";
 
 export const MacbookScroll = ({
   src,
@@ -60,7 +58,7 @@ export const MacbookScroll = ({
     [0, 0.3],
     [0.6, isMobile ? 1 : 1.5]
   );
-  const translate = useTransform(scrollYProgress, [0, 1], [0, 1500]);
+  const translate = useTransform(scrollYProgress, [0, 1], [0, 800]);
   const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
   const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
@@ -68,18 +66,18 @@ export const MacbookScroll = ({
   return (
     <div
       ref={ref}
-      className="min-h-[200vh]  flex flex-col items-center py-0 md:py-80 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50"
+      className="min-h-[200vh] md:bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900  overflowY-hidden translate-y-[-10rem] flex flex-col items-center py-0 md:py-80 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.5] sm:scale-50  "
     >
       <motion.h2
         style={{
           translateY: textTransform,
           opacity: textOpacity,
         }}
-        className="dark:text-white text-neutral-800 text-3xl font-bold mb-20 text-center"
+        className="text-white bg-transparent   text-3xl font-bold mb-20 text-center"
       >
         {title || (
-          <span>
-            This Macbook is built with Tailwindcss. <br /> No kidding.
+          <span className=" bg-transparent  ">
+            TRANSFORMING IMAGINATIONS INTO CAPTIVATING <br /> WEB EXPERIENCES.
           </span>
         )}
       </motion.h2>
@@ -92,26 +90,26 @@ export const MacbookScroll = ({
         translate={translate}
       />
       {/* Base area */}
-      <div className="h-[22rem] w-[32rem] bg-gray-200 dark:bg-[#272729] rounded-2xl overflow-hidden relative -z-10">
+      <div className="h-[22rem]  w-[32rem] bg-gray-300 rounded-2xl overflow-hidden relative -z-10">
         {/* above keyboard bar */}
-        <div className="h-10 w-full relative">
-          <div className="absolute inset-x-0 mx-auto w-[80%] h-4 bg-[#050505]" />
+        <div className="h-10 w-full relative bg-gray-300">
+          <div className="absolute inset-x-0 mx-auto w-[80%] h-4 bg-gray-300" />
         </div>
-        <div className="flex relative">
-          <div className="mx-auto w-[10%] overflow-hidden  h-full">
+        <div className="flex relative bg-gray-300">
+          <div className="mx-auto w-[10%] overflow-hidden  bg-gray-300 h-full">
             <SpeakerGrid />
           </div>
-          <div className="mx-auto w-[80%] h-full">
+          <div className="mx-auto w-[80%] h-full bg-gray-300">
             <Keypad />
           </div>
-          <div className="mx-auto w-[10%] overflow-hidden  h-full">
+          <div className="mx-auto w-[10%] overflow-hidden bg-gray-300  h-full">
             <SpeakerGrid />
           </div>
         </div>
         <Trackpad />
-        <div className="h-2 w-20 mx-auto inset-x-0 absolute bottom-0 bg-gradient-to-t from-[#272729] to-[#050505] rounded-tr-3xl rounded-tl-3xl" />
+        <div className="h-2 w-20 mx-auto inset-x-0 absolute bottom-0 bg-gradient-to-t from-[#272729] to-[#050505] rounded-tr-3xl rounded-tl-3xl bg-red" />
         {showGradient && (
-          <div className="h-40 w-full absolute bottom-0 inset-x-0 bg-gradient-to-t dark:from-black from-white via-white dark:via-black to-transparent z-50"></div>
+          <div className="h-40 w-full absolute bottom-0 inset-x-0 bg-gradient-to-t from-black  via-black to-transparent z-50"></div>
         )}
         {badge && <div className="absolute bottom-4 left-4">{badge}</div>}
       </div>
@@ -133,14 +131,14 @@ export const Lid = ({
   src?: string;
 }) => {
   return (
-    <div className="relative [perspective:800px]">
+    <div className="relative  [perspective:800px]  overflowY-hidden">
       <div
         style={{
           transform: "perspective(800px) rotateX(-25deg) translateZ(0px)",
           transformOrigin: "bottom",
           transformStyle: "preserve-3d",
         }}
-        className="h-[12rem] w-[32rem] bg-[#010101] rounded-2xl p-2 relative"
+        className="h-[12rem] w-[32rem]  bg-[#010101] rounded-2xl p-2 relative"
       >
         <div
           style={{
@@ -162,14 +160,11 @@ export const Lid = ({
           transformStyle: "preserve-3d",
           transformOrigin: "top",
         }}
-        className="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
+        className="h-96 w-[32rem]   absolute inset-0 bg-[#010101] rounded-2xl p-2"
       >
-        <div className="absolute inset-0 bg-[#272729] rounded-lg" />
-        <Image
-          src={src as string}
-          alt="aceternity logo"
-          fill
-          className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
+        <img
+          src="/images/macbook_image.png"
+          className="absolute inset-0 bg-gray-300 rounded-lg h-[100%] z=[-50]"
         />
       </motion.div>
     </div>
@@ -179,7 +174,7 @@ export const Lid = ({
 export const Trackpad = () => {
   return (
     <div
-      className="w-[40%] mx-auto h-32  rounded-xl my-1"
+      className="w-[40%] mx-auto h-32 bg-gray-800 rounded-xl my-1"
       style={{
         boxShadow: "0px 0px 1px 1px #00000020 inset",
       }}
@@ -563,7 +558,7 @@ export const KBtn = ({
     <div
       className={cn(
         "p-[0.5px] rounded-[4px]",
-        backlit && "bg-white/[0.2] shadow-xl shadow-white"
+        backlit && "bg-gray-300/[0.2] shadow-xl shadow-white"
       )}
     >
       <div
@@ -601,7 +596,7 @@ export const Row = ({ children }: { children: React.ReactNode }) => {
 export const SpeakerGrid = () => {
   return (
     <div
-      className="flex px-[0.5px] gap-[2px] mt-2 h-40"
+      className="flex px-[0.5px] gap-[2px] mt-2 h-40 bg-gray-300"
       style={{
         backgroundImage:
           "radial-gradient(circle, #08080A 0.5px, transparent 0.5px)",
