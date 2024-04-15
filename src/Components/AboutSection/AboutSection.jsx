@@ -1,7 +1,7 @@
 import React from "react";
 
 const AboutSection = () => {
-  return <div>AboutSection</div>;
+  return <div>aboursection</div>;
 };
 
 export default AboutSection;
