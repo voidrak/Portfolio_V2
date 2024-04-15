@@ -68,7 +68,7 @@ export const MacbookScroll = ({
       ref={ref}
       className="overflowY-hidden flex min-h-[100vh] flex-shrink-0 scale-[0.5] transform  flex-col items-center justify-start from-slate-900 via-slate-800 to-blue-900 py-0 [perspective:800px] sm:scale-50 md:min-h-[200vh] md:translate-y-[-10rem] md:scale-100  md:bg-gradient-to-br md:py-80  "
     >
-      <motion.h1
+      <motion.div
         style={{
           translateY: textTransform,
           opacity: textOpacity,
@@ -76,14 +76,14 @@ export const MacbookScroll = ({
         className="mb-20 bg-transparent   text-center text-3xl font-bold text-white"
       >
         {title || (
-          <h1 className=" min-w-[100%] bg-transparent ">
+          <div className="  min-w-[100%] bg-transparent ">
             TRANSFORMING IMAGINATIONS INTO CAPTIVATING <br />{" "}
-            <h1 className="relative  mx-auto mt-2 max-w-[300px] rounded-sm bg-transparent p-1 before:absolute  before:left-0 before:top-0 before:z-50 before:block before:w-full before:bg-first-accent-color ">
+            <h2 className=" relative mx-auto mt-2 max-w-[300px] rounded-lg bg-transparent from-emerald-400  to-cyan-400 p-1  before:absolute before:left-0 before:top-0 before:z-[-1]   before:block before:h-full before:w-full before:origin-left before:animate-text-highlighter before:bg-gradient-to-r ">
               WEB EXPERIENCES
-            </h1>
-          </h1>
+            </h2>
+          </div>
         )}
-      </motion.h1>
+      </motion.div>
       {/* Lid */}
       <Lid
         src={src}
@@ -149,9 +149,9 @@ export const Lid = ({
           }}
           className="absolute inset-0 flex items-center justify-center rounded-lg bg-[#010101]"
         >
-          <span className="text-white">
+          {/* <span className="text-white">
             <AceternityLogo />
-          </span>
+          </span> */}
         </div>
       </div>
       <motion.div

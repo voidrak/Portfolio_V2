@@ -4,10 +4,11 @@ const svgToDataUri = require("mini-svg-data-uri");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
+const { transform } = require("typescript");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{ts,tsx}"],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
   theme: {
     extend: {
@@ -16,6 +17,15 @@ module.exports = {
         "text-color-light": "#94a3b8",
         "first-accent-color": "#51d2b9",
       },
+      keyframes:{
+        highlighter: {
+          '0%':{transform:'scaleX(0)'},
+          '100%':(transform: 'scaleX(100)')
+        }
+      },
+      animation:{
+        'text-highlighter':'highlighter 1.2s linear 0.3s forwards'
+      }
     },
   },
   plugins: [
