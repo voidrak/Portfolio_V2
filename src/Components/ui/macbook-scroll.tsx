@@ -22,6 +22,7 @@ import { IconWorld } from "@tabler/icons-react";
 import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
+import Reveal from "../../utils/Reveal";
 
 export const MacbookScroll = ({
   src,
@@ -77,8 +78,10 @@ export const MacbookScroll = ({
       >
         {title || (
           <div className="  min-w-[100%] bg-transparent ">
-            TRANSFORMING IMAGINATIONS INTO CAPTIVATING <br />{" "}
-            <h2 className=" relative mx-auto mt-2 max-w-[300px] rounded-lg bg-transparent from-emerald-400  to-cyan-400 p-1  before:absolute before:left-0 before:top-0 before:z-[-1]   before:block before:h-full before:w-full before:origin-left before:animate-text-highlighter before:bg-gradient-to-r ">
+            <Reveal>
+              TRANSFORMING IMAGINATIONS INTO CAPTIVATING <br />{" "}
+            </Reveal>
+            <h2 className=" relative mx-auto mt-2 max-w-[300px] rounded-lg bg-transparent p-1  before:absolute before:left-0  before:top-0 before:z-[-1] before:block before:h-full   before:w-full before:origin-left before:animate-text-highlighter  ">
               WEB EXPERIENCES
             </h2>
           </div>

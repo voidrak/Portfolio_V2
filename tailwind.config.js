@@ -19,12 +19,12 @@ module.exports = {
       },
       keyframes:{
         highlighter: {
-          '0%':{transform:'scaleX(0)'},
-          '100%':(transform: 'scaleX(100)')
+          '0%':{transform:'scaleX(0)', opacity:0 , background:"transparent" },
+          '100%':{transform: 'scaleX(1)', opacity:1,background:" linear-gradient(to right, #10B981, #6EE7B7)"}
         }
       },
       animation:{
-        'text-highlighter':'highlighter 1.2s linear 0.3s forwards'
+        'text-highlighter':'highlighter 1.5s linear 1s forwards'
       }
     },
   },
