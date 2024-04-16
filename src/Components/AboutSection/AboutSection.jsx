@@ -1,11 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Reveal from "../../utils/Reveal";
-import { delay, easeInOut, motion } from "framer-motion";
+import {
+  delay,
+  easeInOut,
+  motion,
+  useAnimation,
+  useInView,
+} from "framer-motion";
 const AboutSection = () => {
   const [sliderValue, setSliderValue] = useState(3);
   const [aboutText, setAboutText] = useState(
     "I'm Nahom Abraham, a web developer and software engineering student at Kombolcha Institute of Technology. Since 2022, I've been designing and developing websites, always striving to learn and improve in the dynamic world of technology. Currently, I'm working with React and Tailwind",
   );
+  const ref = useRef(null);
+  const controls = useAnimation();
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView]);
+
   useEffect(() => {
     let bioText = "";
     switch (sliderValue) {
@@ -41,7 +57,7 @@ const AboutSection = () => {
     visible: {
       opacity: 1,
       pathLength: 1,
-      transition: { duration: 0.5, delay: 1, ease: "easeInOut" },
+      transition: { duration: 1, delay: 1, ease: "easeInOut" },
     },
   };
 
@@ -75,22 +91,25 @@ const AboutSection = () => {
             className="translate-y-[10px] rotate-[80deg] bg-transparent"
           >
             <motion.path
+              ref={ref}
               variants={svgVariants}
               initial="hidden"
-              animate="visible"
+              animate={controls}
               stroke="none"
               d="M0 0h24v24H0z"
             />
             <motion.path
+              ref={ref}
               variants={svgVariants}
               initial="hidden"
-              animate="visible"
+              animate={controls}
               d="M12 3h5v5"
             />
             <motion.path
+              ref={ref}
               variants={svgVariants}
               initial="hidden"
-              animate="visible"
+              animate={controls}
               d="M17 3l-7.536 7.536a5 5 0 0 0 -1.464 3.534v6.93"
             />
           </svg>
