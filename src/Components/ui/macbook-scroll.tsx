@@ -64,6 +64,26 @@ export const MacbookScroll = ({
   const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
+  const heroRevel = {
+    hidden: {
+      transition: {
+        staggerChildren: 0.2,
+        staggerDirection: 1,
+      },
+    },
+    visible: {
+      transition: {
+        staggerChildren: 0.4,
+        staggerDirection: 1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: -75 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div
       ref={ref}
@@ -77,14 +97,27 @@ export const MacbookScroll = ({
         className="mb-20 bg-transparent   text-center text-3xl font-bold text-white"
       >
         {title || (
-          <div className="  min-w-[100%] bg-transparent ">
-            <Reveal>
-              TRANSFORMING IMAGINATIONS INTO CAPTIVATING <br />{" "}
-            </Reveal>
-            <h2 className=" relative mx-auto mt-2 max-w-[300px] rounded-lg bg-transparent p-1  before:absolute before:left-0  before:top-0 before:z-[-1] before:block before:h-full   before:w-full before:origin-left before:animate-text-highlighter  ">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={heroRevel}
+            className="  min-w-[100%] bg-transparent "
+          >
+            <motion.h1
+              variants={itemVariants}
+              transition={{ duration: 1 }}
+              className="bg-transparent"
+            >
+              TRANSFORMING IMAGINATIONS INTO CAPTIVATING <br />
+            </motion.h1>
+            <motion.h1
+              variants={itemVariants}
+              transition={{ duration: 1 }}
+              className=" relative mx-auto mt-2 max-w-[300px]  bg-transparent p-1 before:absolute  before:left-0 before:top-0  before:z-[-1] before:block before:h-full before:w-full   before:origin-left before:animate-text-highlighter before:rounded-lg  "
+            >
               WEB EXPERIENCES
-            </h2>
-          </div>
+            </motion.h1>
+          </motion.div>
         )}
       </motion.div>
       {/* Lid */}

@@ -24,7 +24,7 @@ module.exports = {
         }
       },
       animation:{
-        'text-highlighter':'highlighter 1.5s linear 1s forwards'
+        'text-highlighter':'highlighter 1.5s linear 0.9s forwards'
       }
     },
   },
