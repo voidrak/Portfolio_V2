@@ -87,7 +87,7 @@ export const MacbookScroll = ({
   return (
     <div
       ref={ref}
-      className="overflowY-hidden flex min-h-[100vh] flex-shrink-0 scale-[0.5] transform  flex-col items-center justify-start from-slate-900 via-slate-800 to-blue-900 py-0 [perspective:800px] sm:scale-50 md:min-h-[200vh] md:translate-y-[-10rem] md:scale-100  md:bg-gradient-to-br md:py-80  "
+      className="overflowY-hidden  flex min-h-[100vh] flex-shrink-0 scale-[0.5] transform  flex-col items-center justify-start from-slate-900 via-slate-800 to-blue-900 py-0 [perspective:800px] sm:scale-50 md:min-h-[200vh] md:translate-y-[-10rem] md:scale-100  md:bg-gradient-to-br md:py-80  "
     >
       <motion.div
         style={{
@@ -170,7 +170,7 @@ export const Lid = ({
   src?: string;
 }) => {
   return (
-    <div className="overflowY-hidden  relative  [perspective:800px]">
+    <div className="overflowY-hidden   relative  [perspective:800px]">
       <div
         style={{
           transform: "perspective(800px) rotateX(-25deg) translateZ(0px)",
