@@ -150,7 +150,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <p className="max-w-[860px] py-4 text-xl font-semibold text-text-color-bold">
+      <p className="max-w-[860px] py-4 text-xl font-semibold text-text-color-light">
         {aboutText}
       </p>
     </div>

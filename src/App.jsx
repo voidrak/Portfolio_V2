@@ -6,14 +6,16 @@ import { TracingBeam } from "./Components/ui/tracing-beam";
 import "./App.css";
 import NavBar from "./Components/SharedLayout/NavBar";
 import AboutSection from "./Components/AboutSection/AboutSection";
+import ProjectSection from "./Components/Projects/ProjectSection";
 const App = () => {
   return (
     <div className="overflow-x-hidden ">
       <HeroSection />
       <TracingBeam className="">
         <NavBar />
-        <div className="mx-auto max-w-[1570px] px-10">
+        <div className="mx-auto  px-10">
           <AboutSection />
+          <ProjectSection />
           <div>
             <p>
               <span>

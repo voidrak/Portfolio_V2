@@ -29,6 +29,11 @@ module.exports = {
     },
   },
   plugins: [
+
+
+    require('tailwind-scrollbar'),
+
+
     // rest of the code
     addVariablesForColors,
 
