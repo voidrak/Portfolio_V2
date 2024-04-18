@@ -60,7 +60,36 @@ const AboutSection = () => {
       transition: { duration: 1, delay: 1, ease: "easeInOut" },
     },
   };
+  const wordArray = aboutText.split(" ");
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
+    }),
+  };
+  const childVariant = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+
+    hidden: {
+      opacity: 0,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+  };
   return (
     <div className="mt-24 pb-[10rem] pt-8 sm:pt-[10rem] min-[1700px]:pt-0 ">
       <Reveal>
@@ -150,9 +179,18 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <p className="max-w-[860px] py-4 text-xl font-semibold text-text-color-light">
-        {aboutText}
-      </p>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className=" flex max-w-[860px] flex-wrap text-wrap  py-4 text-xl font-semibold text-text-color-light"
+      >
+        {wordArray.map((text) => (
+          <motion.span variants={childVariant} className="mx-[2px] ">
+            {text}
+          </motion.span>
+        ))}
+      </motion.div>
     </div>
   );
 };
