@@ -186,8 +186,12 @@ const AboutSection = () => {
         animate="visible"
         className=" flex max-w-[860px] flex-wrap text-wrap  py-4 text-xl font-semibold text-text-color-light"
       >
-        {wordArray.map((text) => (
-          <motion.span variants={childVariant} className="mx-[2px] ">
+        {wordArray.map((text, index) => (
+          <motion.span
+            variants={childVariant}
+            key={index}
+            className="mx-[2px] "
+          >
             {text}
           </motion.span>
         ))}

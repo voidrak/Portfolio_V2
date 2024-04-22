@@ -3,3 +3,7 @@ body {
   background-color: #09182f;
   font-family: "DM Sans", sans-serif;
 }
+.textContainer {
+  transform-style: preserve-3d;
+  transition: transform 0.4s;
+}

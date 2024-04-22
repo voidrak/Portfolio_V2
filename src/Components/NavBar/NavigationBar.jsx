@@ -72,7 +72,7 @@ const NavigationBar = () => {
                     animate="enter"
                     exit="exit"
                     href={item.href}
-                    className="    z-10 font-[300] first-letter:uppercase hover:text-first-accent-color"
+                    className="    duration-400 z-10 font-[300] transition-all first-letter:uppercase hover:font-semibold hover:text-first-accent-color"
                   >
                     {item.title}
                   </motion.a>
