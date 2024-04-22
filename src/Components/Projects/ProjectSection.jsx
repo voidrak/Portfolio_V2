@@ -9,6 +9,8 @@ import {
 } from "framer-motion";
 import Reveal from "../../utils/Reveal";
 import Cards from "./ProjectCards";
+import TestCards from "./TestCards";
+import Cards2 from "./Cards2";
 const ProjectSection = () => {
   return (
     <div className="sticky top-0 ">
@@ -18,10 +20,11 @@ const ProjectSection = () => {
         </h1>
       </Reveal>
       <motion.div
-        className={`scrollbar-thumb-rounded-full    my-8  h-[90vh] space-y-8   overflow-y-scroll scrollbar scrollbar-thumb-gray-200 `}
+        className={`scrollbar-thumb-rounded-full    my-8  h-[90vh] space-y-8   overflow-x-hidden overflow-y-scroll scrollbar scrollbar-thumb-gray-200 `}
       >
         <div className=" relative cursor-pointer  overscroll-contain pb-24  *:h-[80vh]">
-          <Cards />
+          {/* <Cards /> */}
+          <Cards2 />
         </div>
       </motion.div>
     </div>

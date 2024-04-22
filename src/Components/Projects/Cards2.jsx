@@ -6,7 +6,7 @@ import {
   useAnimationControls,
 } from "framer-motion";
 
-const Cards = () => {
+const Cards2 = () => {
   const projectCards = [
     {
       index: 1,
@@ -110,4 +110,4 @@ const Cards = () => {
   return <div>{mappedCards}</div>;
 };
 
-export default Cards;
+export default Cards2;

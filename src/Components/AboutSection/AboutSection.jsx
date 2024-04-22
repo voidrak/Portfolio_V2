@@ -143,7 +143,7 @@ const AboutSection = () => {
             />
           </svg>
         </div>
-        <div className="relative w-[90%]  max-w-[460px] ">
+        <div className="relative mt-4 w-[90%]  max-w-[460px] ">
           {sliderValue == 1 && (
             <span className="absolute left-[-6px] top-[-10px] bg-transparent text-xl">
               😫
@@ -180,6 +180,7 @@ const AboutSection = () => {
       </div>
 
       <motion.div
+        key={aboutText}
         variants={containerVariants}
         initial="hidden"
         animate="visible"

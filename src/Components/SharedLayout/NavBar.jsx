@@ -34,7 +34,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="fixed left-[30px]  top-0 z-[9999] mt-4 bg-transparent text-white  lg:top-[50px] ">
+    <div className="fixed left-[30px] top-0 z-[9999] mt-4 cursor-pointer bg-transparent text-white  lg:top-[50px] ">
       <div
         className="bg-transparent"
         onClick={() => {

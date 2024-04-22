@@ -7,12 +7,14 @@ import "./App.css";
 import NavBar from "./Components/SharedLayout/NavBar";
 import AboutSection from "./Components/AboutSection/AboutSection";
 import ProjectSection from "./Components/Projects/ProjectSection";
+import NavigationBar from "./Components/SharedLayout/NavigationBar";
 const App = () => {
   return (
     <div className="overflow-x-hidden ">
       <HeroSection />
       <TracingBeam className="">
-        <NavBar />
+        {/* <NavBar /> */}
+        <NavigationBar />
         <div className="mx-auto  px-10">
           <AboutSection />
           <ProjectSection />
