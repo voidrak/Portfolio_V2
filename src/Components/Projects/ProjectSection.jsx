@@ -5,7 +5,10 @@ import Reveal from "../../utils/Reveal";
 
 const ProjectSection = () => {
   const containerRef = useRef(null);
-
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "start start"],
+  });
   return (
     <div className=" main    relative mb-[100vh] mt-[50vh] py-32 ">
       <Reveal>
@@ -26,13 +29,16 @@ const ProjectSection = () => {
               {project.title}
             </h2>
             <div className="body grid items-center   gap-y-4  px-2     ">
-              <div className="imageContainer relative   mx-auto   overflow-hidden rounded-lg   ">
-                <motion.img
+              <motion.div
+                style={{ opacity: scrollYProgress }}
+                className="imageContainer relative   mx-auto   overflow-hidden rounded-lg   "
+              >
+                <img
                   src={project.imgSrc}
                   alt="project image"
                   className="h-full w-full  "
                 />
-              </div>
+              </motion.div>
 
               <div className="description      ">
                 <p className="  text-base first-letter:text-[28px] sm:hidden  ">
