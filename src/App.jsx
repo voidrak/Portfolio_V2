@@ -4,10 +4,10 @@ import HeroSection from "./Components/HeroSection/HeroSection";
 import { TracingBeam } from "./Components/ui/tracing-beam";
 
 import "./App.css";
-import NavBar from "./Components/SharedLayout/NavBar";
+import NavBar from "./Components/NavBar/NavBar";
 import AboutSection from "./Components/AboutSection/AboutSection";
 import ProjectSection from "./Components/Projects/ProjectSection";
-import NavigationBar from "./Components/SharedLayout/NavigationBar";
+import NavigationBar from "./Components/NavBar/NavigationBar";
 const App = () => {
   return (
     <div className="overflow-x-hidden ">

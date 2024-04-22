@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Curve from "./Curve";
 const NavigationBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const navBarLink = [
@@ -11,7 +12,7 @@ const NavigationBar = () => {
 
   const menuSlide = {
     initial: {
-      x: "100%",
+      x: "calc(100% + 100px)",
     },
     enter: {
       x: "0%",
@@ -58,9 +59,9 @@ const NavigationBar = () => {
             exit="exit"
             className="h-[100vh] w-[100vw] max-w-[481px] bg-black  text-text-color-bold "
           >
-            <div className="body  flex justify-between p-[100px]">
-              <div className="nav mt-20 flex w-full flex-col gap-4 text-[56px]">
-                <div className="header border-b border-text-color-light text-base  ">
+            <div className="   flex justify-between p-[100px]">
+              <div className="  mt-20 flex w-full flex-col gap-4 text-[56px]">
+                <div className="  border-b border-text-color-light text-base  ">
                   <p className="pb-2 text-text-color-light">Navigation</p>
                 </div>
                 {navBarLink.map((item, index) => (
@@ -71,13 +72,14 @@ const NavigationBar = () => {
                     animate="enter"
                     exit="exit"
                     href={item.href}
-                    className=" link font-[300] first-letter:uppercase"
+                    className="    z-10 font-[300] first-letter:uppercase hover:text-first-accent-color"
                   >
                     {item.title}
                   </motion.a>
                 ))}
               </div>
             </div>
+            <Curve />
           </motion.div>
         )}
       </AnimatePresence>
