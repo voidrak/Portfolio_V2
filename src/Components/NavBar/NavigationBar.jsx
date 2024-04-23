@@ -1,8 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Curve from "./Curve";
+import OutsideClick from "../../hooks/outSideClick";
+
 const NavigationBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const navRef = useRef(null);
+
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+
+  useEffect(() => {
+    if (isHovered) {
+      // Disable scrolling
+      document.body.style.overflow = "hidden";
+    } else {
+      // Enable scrolling
+      document.body.style.overflow = "auto";
+    }
+  }, [isHovered]);
+
+  const cartOutsideClicked = OutsideClick(navRef);
+
+  useEffect(() => {
+    if (cartOutsideClicked) {
+      setIsNavOpen(false);
+    }
+  }, [cartOutsideClicked]);
+
   const navBarLink = [
     { title: "About", href: "#" },
     { title: "Skills", href: "#" },
@@ -39,7 +65,12 @@ const NavigationBar = () => {
   };
 
   return (
-    <div className="fixed right-0 top-0 z-50 ">
+    <div
+      ref={navRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className=" fixed right-0 top-0 z-50 overscroll-contain "
+    >
       <div
         onClick={() => {
           setIsNavOpen(!isNavOpen);
