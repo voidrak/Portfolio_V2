@@ -1,53 +1,76 @@
 const projectData = [
   {
-    title: "Matthias Leidinger",
+    title: "First Portfolio",
     description:
-      "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
+      "This is where it all began! My very first Portfolio project. It's like my online home, made with love using HTML, CSS, and just a sprinkle of JavaScript. Here, you'll find a little glimpse into my journey as a budding web developer. It's simple, it's cozy, and it's where my adventure into the world of web development started ",
     shortDescription:
-      "Originally hailing from Austria, Berlin-based photographer",
+      "My first  Portfolio built using html , css  and little JS  ",
     link: "rock.jpg",
-    imgSrc: "/images/macbook_image.png",
+    imgSrc: "projectImages/portofolio.png",
     color: "#BBACAF",
+    demo: "https://voidrak.github.io/",
+    sourceCode: "https://github.com/voidrak/voidrak.github.io",
   },
   {
-    title: "Clément Chapillon",
+    title: "ETHIOFLIX",
     description:
-      "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
+      "EthioFix is a dynamic web application built using React designed to provide a platform for Ethiopian movie enthusiasts. This user-friendly site offers a curated collection of Ethiopian movies allowing users to browse search and watch their favorite films with ease",
     shortDescription:
-      "Originally hailing from Austria, Berlin-based photographer",
+      "EthioFix is a dynamic Ethiopian movie site  built using React ",
     link: "tree.jpg",
-    imgSrc: "/images/macbook_image.png",
+    imgSrc: "projectImages/ethioflix.png",
     color: "#977F6D",
+    demo: "https://ethioflixx.vercel.app/",
+    sourceCode: "https://github.com/voidrak/EthioFlix",
   },
   {
-    title: "Zissou",
+    title: "Visit Ethiopia",
     description:
-      "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
+      " Discover the rich cultural heritage stunning landscapes and vibrant traditions that make Ethiopia a must-visit destination. With our user-friendly platform you can easily find and book hotels near your desired tourist sites ensuring a seamless and hassle-free travel experience.",
     shortDescription:
-      "Originally hailing from Austria, Berlin-based photographer",
-    link: "water.jpg",
-    imgSrc: "/images/macbook_image.png",
-    color: "#C2491D",
-  },
-  {
-    title: "Mathias Svold and Ulrik Hasemann",
-    description:
-      "The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.",
-    shortDescription:
-      "Originally hailing from Austria, Berlin-based photographer",
-    link: "house.jpg",
-    imgSrc: "/images/macbook_image.png",
-    color: "#B62429",
-  },
-  {
-    title: "Mark Rammers",
-    description:
-      "Dutch photographer Mark Rammers has shared with IGNANT the first chapter of his latest photographic project, ‘all over again’—captured while in residency at Hektor, an old farm in Los Valles, Lanzarote. Titled ‘Beginnings’, the mesmerizing collection of images is a visual and meditative journey into the origins of regrets and the uncertainty of stepping into new unknowns.",
-    shortDescription:
-      "Originally hailing from Austria, Berlin-based photographer",
+      "One-stop destination for exploring and booking hotels near the captivating tourist sites of Ethiopia",
     link: "cactus.jpg",
-    imgSrc: "/images/macbook_image.png",
+    imgSrc: "projectImages/visitethiopia.png",
     color: "#88A28D",
+    demo: "https://visit-ethio.vercel.app/",
+    sourceCode: "https://github.com/voidrak/Vist-Ethiopia",
+  },
+  {
+    title: "Monstercat -Website Clone",
+    description:
+      "Is a recreation of the a single page from renowned website MONSTERCAT aiming to deliver a similar experience project represents an exciting journey of learning and enjoyment. Throughout the development process I have acquired new skills and knowledge expanding my understanding of web development and user experience design.",
+    shortDescription:
+      "The Clone of a website called Monstercat( but not the whole websites just one page)",
+    link: "water.jpg",
+    imgSrc: "projectImages/monstercat.png",
+    color: "#C2491D",
+    demo: "https://monstercat-clone-voidrak.vercel.app/",
+    sourceCode: "https://github.com/voidrak/Monstercat-Clone",
+  },
+
+  // {
+  //   title: "Abstract - Website Clone",
+  //   description:
+  //     " I've built a cool website that's actually a clone of a popular one called 'Abstract.' I took the help center page from the original site and recreated it as a project which I found on a website called Frontend Practice. I put a lot of effort into making it look and work just like the original so when you visit my version you'll get the same helpful and user-friendly experience. It's a fun project that I'm proud of!",
+  //   shortDescription:
+  //     "The Clone of a website called Abstract( ONLY its help center page )",
+  //   link: "cactus.jpg",
+  //   imgSrc: "projectImages/abstract.png",
+  //   color: "#88A28D",
+  //   demo: "https://abstract-clone-woad.vercel.app/",
+  //   sourceCode: "https://github.com/voidrak/Abstract-Clone",
+  // },
+  {
+    title: "Sodere-Store ",
+    description:
+      "Sodere Store an e-commerce platform offering a diverse range of products both locally in Ethiopia and internationally has undergone a complete makeover. Recognizing the need for a modern and clean UI I took on the challenge to redesign and rebuild the website from scratch. Using React.js and Tailwind CSS I've created a sleek and contemporary interface that not only looks great but also offers a seamless user experience.",
+    shortDescription:
+      "A complete makeover of Sodere Store an e-commerce platform",
+    link: "house.jpg",
+    imgSrc: "projectImages/soder_store_screenshot_3.png",
+    color: "#316164",
+    demo: "https://github.com/voidrak/Sodere-Store",
+    sourceCode: "https://sodere-store.vercel.app/",
   },
 ];
 export default projectData;

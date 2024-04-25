@@ -24,7 +24,9 @@ module.exports = {
         }
       },
       animation:{
-        'text-highlighter':'highlighter 1.5s linear 0.9s forwards'
+        // animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode animation-play-state;
+
+        'text-highlighter':'highlighter 1.5s ease-in-out 0.9s forwards'
       }
     },
   },

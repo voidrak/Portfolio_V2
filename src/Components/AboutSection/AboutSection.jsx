@@ -91,7 +91,7 @@ const AboutSection = () => {
     },
   };
   return (
-    <div className="mt-24 pb-[10rem] pt-8 sm:pt-[10rem] min-[1700px]:pt-0 ">
+    <div className="  mt-24 pb-[10rem] pt-8 sm:pt-[10rem]  min-[1700px]:pt-0 ">
       <Reveal>
         <h1 className="bg-transparent pb-8 text-4xl font-bold text-text-color-bold">
           ABOUT ME
@@ -184,7 +184,7 @@ const AboutSection = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className=" flex max-w-[860px] flex-wrap text-wrap  py-4 text-xl font-semibold text-text-color-light"
+        className="  flex max-w-[860px] flex-wrap text-wrap  py-4 pb-[10rem] text-xl font-semibold text-text-color-light"
       >
         {wordArray.map((text, index) => (
           <motion.span

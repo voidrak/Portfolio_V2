@@ -112,7 +112,7 @@ export const MacbookScroll = ({
             </motion.h1>
             <motion.h1
               variants={itemVariants}
-              transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+              transition={{ duration: 0.5 }}
               className=" relative mx-auto mt-2 max-w-[300px]  bg-transparent p-1 before:absolute  before:left-0 before:top-0  before:z-[-1] before:block before:h-full before:w-full   before:origin-left before:animate-text-highlighter before:rounded-lg  "
             >
               WEB EXPERIENCES

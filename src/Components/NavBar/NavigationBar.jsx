@@ -75,7 +75,7 @@ const NavigationBar = () => {
         onClick={() => {
           setIsNavOpen(!isNavOpen);
         }}
-        className=" fixed right-2 top-0 z-40 m-[20px] flex  h-[80px] w-[80px] items-center justify-center rounded-full bg-first-accent-color "
+        className=" fixed right-2 top-0 z-40 m-[20px] flex  h-[45px] w-[45px] items-center justify-center rounded-full bg-first-accent-color sm:h-[55px] sm:w-[55px] lg:h-[70px] lg:w-[70px]  xl:h-[80px] xl:w-[80px] "
       >
         <div
           className={`w-full bg-transparent before:relative before:top-[5px] before:m-auto  before:block before:h-[2px] before:w-[40%] before:bg-white after:relative after:top-[-5px]  after:m-auto after:block after:h-[2px] after:w-[40%] after:bg-white ${isNavOpen ? "before:top-[-1px]  before:rotate-[-45deg] after:top-[1px]  after:rotate-[45deg]" : ""} before:transition-all before:duration-200  after:transition-all after:duration-200 `}

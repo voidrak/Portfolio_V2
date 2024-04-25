@@ -8,6 +8,7 @@ import "./App.css";
 import AboutSection from "./Components/AboutSection/AboutSection";
 import ProjectSection from "./Components/Projects/ProjectSection";
 import NavigationBar from "./Components/NavBar/NavigationBar";
+import TechStack from "./Components/SkillSection/TechStack";
 const App = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const App = () => {
         <div className="relative mx-auto px-10">
           <AboutSection />
           <ProjectSection />
+          <TechStack />
           <div>
             <p>
               <span>
