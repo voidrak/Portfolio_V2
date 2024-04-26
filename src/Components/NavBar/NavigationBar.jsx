@@ -30,9 +30,9 @@ const NavigationBar = () => {
   }, [cartOutsideClicked]);
 
   const navBarLink = [
-    { title: "About", href: "#" },
-    { title: "Skills", href: "#" },
-    { title: "Project", href: "#" },
+    { title: "About", href: "#about" },
+    { title: "Project", href: "#project" },
+    { title: "Skills", href: "#skills" },
     { title: "Contact", href: "#" },
   ];
 
@@ -77,9 +77,25 @@ const NavigationBar = () => {
         }}
         className=" fixed right-2 top-0 z-40 m-[20px] flex  h-[45px] w-[45px] items-center justify-center rounded-full bg-first-accent-color sm:h-[55px] sm:w-[55px] lg:h-[70px] lg:w-[70px]  xl:h-[80px] xl:w-[80px] "
       >
-        <div
-          className={`w-full bg-transparent before:relative before:top-[5px] before:m-auto  before:block before:h-[2px] before:w-[40%] before:bg-white after:relative after:top-[-5px]  after:m-auto after:block after:h-[2px] after:w-[40%] after:bg-white ${isNavOpen ? "before:top-[-1px]  before:rotate-[-45deg] after:top-[1px]  after:rotate-[45deg]" : ""} before:transition-all before:duration-200  after:transition-all after:duration-200 `}
-        ></div>
+        <div className={`  `}>
+          <svg
+            className={`ham hamRotate ham1 ${isNavOpen ? "rotate-45" : " "} w-full  `}
+            viewBox="0 0 100 100"
+            onclick="this.classList.toggle('active')"
+          >
+            <path
+              className={`line top  `}
+              style={{ strokeDashoffset: ` ${isNavOpen ? " -98px" : " "}` }}
+              d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
+            />
+            <path className="line middle" d="m 30,50 h 40" />
+            <path
+              className="line bottom"
+              style={{ strokeDashoffset: ` ${isNavOpen ? " -138px" : " "}` }}
+              d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
+            />
+          </svg>
+        </div>
       </div>
       <AnimatePresence mode="wait">
         {isNavOpen && (

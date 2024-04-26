@@ -1,9 +1,108 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+:root {
+  --deg: 1;
+  --x: -50%;
+  --y: -50%;
+}
+
 body {
   background-color: #09182f;
   font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 .textContainer {
   transform-style: preserve-3d;
   transition: transform 0.4s;
+}
+
+.circle-div {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(var(--x, -50%), var(--y, -50%)) rotate(0deg);
+  font-size: 20vmin;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 90% 95% 85% 105%;
+  background: #0f0;
+  mix-blend-mode: screen;
+  filter: hue-rotate(0deg);
+  animation: wobble calc(150ms * var(--t)) linear infinite;
+  transform-origin: -var(--y) -var(--x);
+  box-shadow:
+    0 0 0.5em 0.2em #000 inset,
+    0 0 0.15em 0 #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::after {
+    font-size: 1em;
+    content: "☻";
+    white-space: nowrap;
+  }
+  &:nth-child(1) {
+    --x: -53%;
+    --y: -53%;
+    --t: 37;
+  }
+  &:nth-child(2) {
+    --x: -47%;
+    --y: -52%;
+    --t: 58;
+  }
+  &:nth-child(3) {
+    --x: -45%;
+    --y: -50%;
+    --t: 46;
+  }
+  &:nth-child(4) {
+    --x: -53%;
+    --y: -45%;
+    --t: 72;
+  }
+  &:nth-child(5) {
+    --x: -55%;
+    --y: -45%;
+    --t: 62;
+  }
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line {
+  fill: none;
+  transition:
+    stroke-dasharray 400ms,
+    stroke-dashoffset 400ms;
+  stroke: white;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.ham1 .top {
+  stroke-dasharray: 40 139;
+}
+.ham1 .bottom {
+  stroke-dasharray: 40 180;
+}
+
+@keyframes wobble {
+  to {
+    filter: hue-rotate(360deg);
+    transform: translate(var(--x), var(--y)) rotate(360deg);
+  }
+}
+@media screen and (min-width: 1536px) {
+  .circle-div {
+    width: 3em;
+    height: 3em;
+  }
 }

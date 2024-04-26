@@ -52,6 +52,7 @@ const ProjectCard = ({ project, i, progress, targetScale, range }) => {
   return (
     <div
       ref={containerRef}
+      id="project"
       className="cardContainer sticky top-7 flex h-[90vh] translate-x-1 items-center justify-center"
     >
       <motion.div

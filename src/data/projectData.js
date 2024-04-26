@@ -1,6 +1,6 @@
 const projectData = [
   {
-    title: "First Portfolio",
+    title: "  Portfolio V1",
     description:
       "This is where it all began! My very first Portfolio project. It's like my online home, made with love using HTML, CSS, and just a sprinkle of JavaScript. Here, you'll find a little glimpse into my journey as a budding web developer. It's simple, it's cozy, and it's where my adventure into the world of web development started ",
     shortDescription:

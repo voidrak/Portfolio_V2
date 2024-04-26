@@ -91,7 +91,10 @@ const AboutSection = () => {
     },
   };
   return (
-    <div className="  mt-24 pb-[10rem] pt-8 sm:pt-[10rem]  min-[1700px]:pt-0 ">
+    <div
+      className="  mt-24 pb-[10rem] pt-8 sm:pt-[10rem]  min-[1700px]:pt-0 "
+      id="about"
+    >
       <Reveal>
         <h1 className="bg-transparent pb-8 text-4xl font-bold text-text-color-bold">
           ABOUT ME
