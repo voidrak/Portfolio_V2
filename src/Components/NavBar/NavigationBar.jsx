@@ -13,10 +13,8 @@ const NavigationBar = () => {
 
   useEffect(() => {
     if (isHovered) {
-      // Disable scrolling
       document.body.style.overflow = "hidden";
     } else {
-      // Enable scrolling
       document.body.style.overflow = "auto";
     }
   }, [isHovered]);
