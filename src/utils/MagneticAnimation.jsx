@@ -27,7 +27,6 @@ const MagneticAnimation = ({ children }) => {
       ref={ref}
       animate={{ x, y }}
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-      className="cursor-pointer"
     >
       {children}
     </motion.div>

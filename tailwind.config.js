@@ -15,8 +15,10 @@ module.exports = {
       colors: {
         "text-color-bold": "#e2e8f0",
         "text-color-light": "#94a3b8",
+        "bg-color": "#09182f",
         "first-accent-color": "#51d2b9",
       },
+      boxShadow:{'box-shadow':' 0px 60px 50px rgba(0, 0, 0, 0.748)'},
       keyframes:{
         highlighter: {
           '0%':{transform:'scaleX(0)', opacity:0 , background:"transparent" },

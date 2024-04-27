@@ -1,12 +1,26 @@
 import React, { useEffect, useRef } from "react";
 import Reveal from "../../utils/Reveal";
 
-import { motion, useInView, useAnimation } from "framer-motion";
+import {
+  motion,
+  useInView,
+  useAnimation,
+  useScroll,
+  useTime,
+  useTransform,
+} from "framer-motion";
 import MagneticAnimation from "../../utils/MagneticAnimation";
 import Portal from "./Portal";
 const TechStack = () => {
   const ref = useRef(null);
+  const container = useRef(null);
   const controls = useAnimation();
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end start"],
+  });
+  const height = useTransform(scrollYProgress, [0, 1], [50, 0]);
   const isInView = useInView(ref, { once: true });
   useEffect(() => {
     if (isInView) {
@@ -22,9 +36,9 @@ const TechStack = () => {
     },
   };
   return (
-    <div id="skills" className="pb-[50vh]  ">
+    <div ref={container} id="skills" className="    ">
       <Reveal>
-        <div className="    relative mx-auto w-[250px] bg-transparent  pb-24  text-4xl font-bold text-text-color-bold  ">
+        <div className="  relative  mx-auto w-[250px] overflow-x-hidden bg-transparent  pb-24  text-4xl font-bold text-text-color-bold  ">
           TECH STACK
           <motion.div
             ref={ref}
@@ -35,7 +49,7 @@ const TechStack = () => {
           ></motion.div>
         </div>
       </Reveal>
-      <div className="flex items-center justify-center xl:justify-around xl:pl-[5rem]">
+      <div className=" mb-[10vh] flex items-center justify-center xl:justify-around xl:pl-[5rem]">
         <div className="relative hidden max-w-[677px] xl:block">
           <Portal />
         </div>
@@ -82,7 +96,6 @@ const TechStack = () => {
               <MagneticAnimation>
                 <img
                   src=" https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white "
-                  className=" "
                   alt="Markdown  "
                   className=" mx-8  my-3 scale-x-[1.5] scale-y-[1.6] "
                 />
@@ -175,6 +188,13 @@ const TechStack = () => {
           </div>
         </div>
       </div>
+
+      <motion.div
+        style={{ height: height }}
+        className="circleContainer relative mx-auto mt-[100px]          "
+      >
+        <div className="circle  shadow-box-shadow  bg-bg-color   absolute  left-[-10%] z-10 h-[1550%] w-[120%] rounded-b-[50%]"></div>
+      </motion.div>
     </div>
   );
 };

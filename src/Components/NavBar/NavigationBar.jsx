@@ -79,7 +79,6 @@ const NavigationBar = () => {
           <svg
             className={`ham hamRotate ham1 ${isNavOpen ? "rotate-45" : " "} w-full  `}
             viewBox="0 0 100 100"
-            onclick="this.classList.toggle('active')"
           >
             <path
               className={`line top  `}
