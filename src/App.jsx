@@ -19,7 +19,7 @@ const App = () => {
         <HeroSection />
         <TracingBeam className="">
           <NavigationBar />
-          <div className="relative mx-auto  ">
+          <div className="relative px-4  ">
             <AboutSection />
             <ProjectSection />
             <TechStack />

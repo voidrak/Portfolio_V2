@@ -19,6 +19,7 @@ module.exports = {
         "first-accent-color": "#51d2b9",
       },
       boxShadow:{'box-shadow':' 0px 60px 50px rgba(0, 0, 0, 0.748)'},
+      fontSize:{ 'text-clamp': "clamp(3rem, 5vw, 96px)",},
       keyframes:{
         highlighter: {
           '0%':{transform:'scaleX(0)', opacity:0 , background:"transparent" },
