@@ -3,7 +3,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 const Reveal = ({ children }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, amount: "all" });
   const mainControls = useAnimation();
   const revelVariants = {
     hidden: { opacity: 0, y: 75 },

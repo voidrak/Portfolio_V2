@@ -15,7 +15,7 @@ const ContactSection = () => {
           <h1 className=" text-text-clamp  font-light lg:mt-[-1.0rem]   xl:mt-[-2.5rem]">
             together
           </h1>
-          <ButtonAnimation className=" absolute left-[50%] top-[80%] flex  h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-full  bg-black">
+          <ButtonAnimation className=" absolute left-[50%] top-[80%] flex h-[180px]  w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-full  bg-black">
             <p className="z-10">Get in touch</p>
           </ButtonAnimation>
         </div>

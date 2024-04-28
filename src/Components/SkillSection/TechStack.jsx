@@ -50,11 +50,10 @@ const TechStack = () => {
         </div>
       </Reveal>
       <div className=" mb-[10vh] flex items-center justify-center xl:justify-around xl:pl-[5rem]">
-        <Reveal>
-          <div className="relative hidden max-w-[677px] xl:block">
-            <Portal />
-          </div>
-        </Reveal>
+        <div className="relative hidden max-w-[677px] xl:block">
+          <Portal />
+        </div>
+
         <div className="xl:translate-x-[10rem]">
           <div className="flex flex-col items-center">
             <h1 className="text-2xl text-text-color-bold"> Languages</h1>
