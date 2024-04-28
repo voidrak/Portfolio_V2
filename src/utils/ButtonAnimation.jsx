@@ -1,19 +1,57 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import MagneticAnimation from "./MagneticAnimation";
 
 const ButtonAnimation = ({
   children,
   backgroundColor = "#455CE9",
   ...attributes
 }) => {
+  const circle = useRef(null);
+  let timeline = useRef(null);
+  let timeoutId = null;
+  useEffect(() => {
+    timeline.current = gsap.timeline({ paused: true });
+    timeline.current
+      .to(
+        circle.current,
+        { top: "-25%", width: "150%", duration: 0.4, ease: "power3.in" },
+        "enter",
+      )
+      .to(
+        circle.current,
+        { top: "-150%", width: "125%", duration: 0.25 },
+        "exit",
+      );
+  }, []);
+
+  const handleMouesEnter = () => {
+    if (timeoutId) clearTimeout(timeoutId);
+    timeline.current.tweenFromTo("enter", "exit");
+  };
+
+  const handleMouesLeave = () => {
+    timeoutId = setTimeout(() => {
+      timeline.current.play();
+    }, 300);
+  };
   return (
     <div
-      className="roundButton relative flex cursor-pointer items-center  justify-center rounded-[3em] border border-[rgb(136,136,136)] px-[60px] py-[15px]   "
-      style={{ backgroundColor }}
+      onMouseEnter={(e) => {
+        handleMouesEnter(e);
+      }}
+      onMouseLeave={(e) => {
+        handleMouesLeave(e);
+      }}
+      className="relative flex  items-center  justify-center overflow-hidden rounded-[3em] border border-[rgb(136,136,136)] px-[60px] py-[15px]  "
+      // style={{ backgroundColor }}
       {...attributes}
     >
       {children}
       <div
-        className="circle absolute top-[100%] h-[150%] w-[100%] rounded-[50%] "
+        ref={circle}
+        className="circle z absolute top-[100%] h-[150%] w-[100%] rounded-[50%] "
         style={{ backgroundColor }}
       ></div>
     </div>
