@@ -31,7 +31,7 @@ const NavigationBar = () => {
     { title: "About", href: "#about" },
     { title: "Project", href: "#project" },
     { title: "Skills", href: "#skills" },
-    { title: "Contact", href: "#" },
+    { title: "Contact", href: "#contact" },
   ];
 
   const menuSlide = {
