@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import ButtonAnimation from "../../utils/ButtonAnimation";
 import Reveal from "../../utils/Reveal";
 import { motion, useInView, useAnimation } from "framer-motion";
+import MagneticAnimation from "../../utils/MagneticAnimation";
 const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: "all" });
@@ -38,8 +39,8 @@ const ContactSection = () => {
   }, [isInView]);
 
   return (
-    <div className=" font-LockerRoom relative mt-16 h-[100vh]  bg-[#141516]  text-white ">
-      <div className="relative mx-auto w-full max-w-[1900px] overflow-x-hidden  bg-[#141516] ">
+    <div className=" font-LockerRoom relative mt-16 h-[100vh]  overflow-hidden  bg-[#141516]  text-white ">
+      <div className="relative mx-auto w-full max-w-[1900px]  bg-[#141516] ">
         <motion.div
           ref={ref}
           initial="hidden"
@@ -94,78 +95,84 @@ const ContactSection = () => {
           Socials
         </h1>
         <div className="flex flex-wrap gap-x-8 text-xl min-[600px]:text-3xl">
-          <a
-            href="http://"
-            target="_blank"
-            rel="noopener noreferrer"
-            className=" flex items-center gap-x-2   "
-          >
-            Github
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="35"
-              height="35"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"
+          <MagneticAnimation>
+            <a
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" flex items-center gap-x-2   "
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M17 7l-10 10" />
-              <path d="M8 7l9 0l0 9" />
-            </svg>
-          </a>
-          <a
-            href="http://"
-            target="_blank"
-            rel="noopener noreferrer"
-            className=" flex items-center gap-x-2   "
-          >
-            Linkedin
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="35"
-              height="35"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"
+              Github
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className=""
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M17 7l-10 10" />
+                <path d="M8 7l9 0l0 9" />
+              </svg>
+            </a>
+          </MagneticAnimation>
+          <MagneticAnimation>
+            <a
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" flex items-center gap-x-2   "
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M17 7l-10 10" />
-              <path d="M8 7l9 0l0 9" />
-            </svg>
-          </a>
-          <a
-            href="http://"
-            target="_blank"
-            rel="noopener noreferrer"
-            className=" flex items-center gap-x-2   "
-          >
-            Twitter
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="35"
-              height="35"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"
+              Linkedin
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className=""
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M17 7l-10 10" />
+                <path d="M8 7l9 0l0 9" />
+              </svg>
+            </a>
+          </MagneticAnimation>
+          <MagneticAnimation>
+            <a
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" flex items-center gap-x-2   "
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M17 7l-10 10" />
-              <path d="M8 7l9 0l0 9" />
-            </svg>
-          </a>
+              Twitter
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className=""
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M17 7l-10 10" />
+                <path d="M8 7l9 0l0 9" />
+              </svg>
+            </a>
+          </MagneticAnimation>
         </div>
       </div>
     </div>
