@@ -5,7 +5,7 @@ import MagneticAnimation from "./MagneticAnimation";
 
 const ButtonAnimation = ({
   children,
-  backgroundColor = "#455CE9",
+  backgroundColor = "#51d2b9",
   ...attributes
 }) => {
   const circle = useRef(null);
@@ -44,7 +44,7 @@ const ButtonAnimation = ({
       onMouseLeave={(e) => {
         handleMouesLeave(e);
       }}
-      className="relative flex  items-center  justify-center overflow-hidden rounded-[3em] border border-[rgb(136,136,136)] px-[60px] py-[15px]  "
+      className="relative my-4  flex w-[85%]  items-center justify-center overflow-hidden rounded-[3em] border border-[rgb(136,136,136)] px-[60px]  py-[15px] hover:text-black  "
       // style={{ backgroundColor }}
       {...attributes}
     >

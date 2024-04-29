@@ -7,3 +7,7 @@
     @apply border border-red-500;
   }
 }
+@font-face {
+  font-family: "LockerRoom";
+  src: url(" src/assets/LockerRoom-Regular.woff");
+}

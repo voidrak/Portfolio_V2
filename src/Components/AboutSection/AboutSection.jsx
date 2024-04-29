@@ -92,7 +92,7 @@ const AboutSection = () => {
   };
   return (
     <div
-      className="  mt-24 pb-[10rem] pt-8 sm:pt-[10rem]  min-[1700px]:pt-0 "
+      className="  relative mt-24 pb-[10rem] pt-8  sm:pt-[10rem] min-[1700px]:pt-0 "
       id="about"
     >
       <Reveal>

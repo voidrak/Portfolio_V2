@@ -42,9 +42,6 @@ const ProjectCard = ({ project, i, progress, targetScale, range }) => {
     target: containerRef,
     offset: ["start end", "start start"],
   });
-  useEffect(() => {
-    console.log(1 - (6 - 5) * 0.05);
-  }, []);
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);
