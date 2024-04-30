@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Reveal from "../../utils/Reveal";
+import toast, { Toaster } from "react-hot-toast";
 import {
   delay,
   easeInOut,
@@ -7,11 +8,15 @@ import {
   useAnimation,
   useInView,
 } from "framer-motion";
+import ButtonAnimation from "../../utils/ButtonAnimation";
 const AboutSection = () => {
   const [sliderValue, setSliderValue] = useState(3);
   const [aboutText, setAboutText] = useState(
     "I'm Nahom Abraham, a web developer and software engineering student at Kombolcha Institute of Technology. Since 2022, I've been designing and developing websites, always striving to learn and improve in the dynamic world of technology. Currently, I'm working with React and Tailwind",
   );
+
+  const notify = () => toast.success("Thanks For Downloading ");
+
   const ref = useRef(null);
   const controls = useAnimation();
   const isInView = useInView(ref, { once: true });
@@ -92,7 +97,7 @@ const AboutSection = () => {
   };
   return (
     <div
-      className="  relative mt-24 pb-[10rem] pt-8  sm:pt-[10rem] min-[1700px]:pt-0 "
+      className="  relative z-10 mt-24 pb-[10rem] pt-8  sm:pt-[10rem] min-[1700px]:pt-0 "
       id="about"
     >
       <Reveal>
@@ -105,7 +110,7 @@ const AboutSection = () => {
         <div className="flex items-center gap-x-4">
           <label
             htmlFor="bio-length"
-            className="text-xl font-semibold  text-text-color-bold"
+            className="whitespace-nowrap text-xl font-semibold text-text-color-bold"
           >
             bio length
           </label>
@@ -187,7 +192,7 @@ const AboutSection = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="  flex max-w-[860px] flex-wrap text-wrap  py-4 pb-[10rem] text-xl font-semibold text-text-color-light"
+        className="  flex max-w-[860px] flex-wrap text-wrap  py-4 pb-[5rem] text-xl font-semibold text-text-color-light"
       >
         {wordArray.map((text, index) => (
           <motion.span
@@ -199,6 +204,19 @@ const AboutSection = () => {
           </motion.span>
         ))}
       </motion.div>
+      <div className=" w-[250px] pb-5 text-xl text-white sm:ml-16">
+        <a
+          href="src/assets/Nahom_Abraham_Resume.pdf"
+          download
+          className="z-10 hover:font-bold"
+          onClick={notify}
+        >
+          <ButtonAnimation>
+            <p className="z-10">RESUME</p>
+          </ButtonAnimation>
+          <Toaster />
+        </a>
+      </div>
     </div>
   );
 };
