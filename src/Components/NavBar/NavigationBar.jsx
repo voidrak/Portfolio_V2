@@ -110,6 +110,10 @@ const NavigationBar = () => {
                 </div>
                 {navBarLink.map((item, index) => (
                   <motion.a
+                    onClick={() => {
+                      setIsNavOpen(false);
+                      setIsHovered(false);
+                    }}
                     key={index}
                     custom={index}
                     variants={slide}

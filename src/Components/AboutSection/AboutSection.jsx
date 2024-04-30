@@ -193,7 +193,7 @@ const AboutSection = () => {
           <motion.span
             variants={childVariant}
             key={index}
-            className="mx-[2px] "
+            className="mx-[2px] xl:text-3xl "
           >
             {text}
           </motion.span>

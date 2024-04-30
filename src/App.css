@@ -24,7 +24,7 @@ body {
   width: 2.5em;
   height: 2.5em;
   border-radius: 90% 95% 85% 105%;
-  background: #0f0;
+  background: #173f7b;
   mix-blend-mode: screen;
   filter: hue-rotate(0deg);
   animation: wobble calc(150ms * var(--t)) linear infinite;
@@ -63,7 +63,7 @@ body {
   &:nth-child(5) {
     --x: -55%;
     --y: -45%;
-    --t: 62;
+    --t: `;
   }
 }
 

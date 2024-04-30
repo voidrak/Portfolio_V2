@@ -1,9 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ButtonAnimation from "../../utils/ButtonAnimation";
 import Reveal from "../../utils/Reveal";
 import { motion, useInView, useAnimation } from "framer-motion";
 import MagneticAnimation from "../../utils/MagneticAnimation";
+import Cursor from "../ui/Cursor";
 const ContactSection = () => {
+  const [isInContact, setIsInContact] = useState(false);
+  const [isInText, setIsInText] = useState(false);
   const ref = useRef(null);
   const svgRef = useRef(null);
   const isInView = useInView(ref, { once: true, amount: "all" });
@@ -58,15 +61,27 @@ const ContactSection = () => {
   return (
     <div
       id="contact"
+      onMouseEnter={() => {
+        setIsInContact(true);
+      }}
+      onMouseLeave={() => {
+        setIsInContact(false);
+      }}
       className=" relative mt-16 h-[100vh] overflow-hidden  bg-[#141516]  font-LockerRoom  text-white "
     >
-      <div className="relative mx-auto w-full max-w-[1900px]  bg-[#141516] ">
+      <div className="relative mx-auto w-full max-w-[1900px]   bg-[#141516] ">
         <motion.div
+          onMouseEnter={() => {
+            setIsInText(true);
+          }}
+          onMouseLeave={() => {
+            setIsInText(false);
+          }}
           ref={ref}
           initial="hidden"
           animate={mainControls}
           variants={containerVariants}
-          className=" w-full overflow-hidden px-4 pt-[8rem] text-[45px] min-[425px]:text-[64px] min-[501px]:text-[80px] md:leading-[10rem] min-[781px]:text-[100px] lg:text-[155px] xl:px-8"
+          className="  w-full overflow-hidden px-4 pt-[8rem] text-[45px] min-[425px]:text-[64px] min-[501px]:text-[80px] md:leading-[10rem] min-[781px]:text-[100px] lg:text-[155px] xl:px-8"
         >
           <motion.div variants={itemVariants} className=" w-full text-left">
             LET'S WORK
@@ -75,7 +90,8 @@ const ContactSection = () => {
             TOGETHER
           </motion.div>
         </motion.div>
-        <div className=" relative mx-auto  mt-16 flex w-full max-w-[1200px]  translate-y-[-4vh] flex-col pr-4  max-[500px]:mt-[10rem] ">
+        {isInContact && <Cursor isInText={isInText} />}
+        <div className="   relative  mx-auto mt-16  flex w-full max-w-[1200px] translate-y-[-10vh]  flex-col  pr-4 max-[500px]:mt-[10rem] md:translate-y-[-5vh]  min-[1700px]:translate-y-0 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

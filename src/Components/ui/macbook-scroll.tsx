@@ -203,7 +203,7 @@ export const Lid = ({
       >
         <img
           src="/images/macbook_image.png"
-          className="z=[-50] absolute inset-0 h-[100%] rounded-lg bg-gray-300"
+          className="z=[-50] absolute inset-0 h-[100%] rounded-lg bg-gray-300 "
         />
       </motion.div>
     </div>
