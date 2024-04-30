@@ -94,6 +94,10 @@ body {
   stroke-dasharray: 40 180;
 }
 
+#skills {
+  cursor: url("public/rocket-cursor.png "), auto;
+}
+
 @keyframes wobble {
   to {
     filter: hue-rotate(360deg);
