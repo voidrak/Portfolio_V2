@@ -42,7 +42,7 @@ const Cursor = ({ isInText }) => {
         width: size,
         height: size,
       }}
-      className="cursor   pointer-events-none fixed left-0 top-0 rounded-full    bg-red-500 mix-blend-difference"
+      className="cursor pointer-events-none   fixed left-0 top-0 hidden rounded-full    bg-red-500 mix-blend-difference md:block"
     />
   );
 };
