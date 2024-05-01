@@ -128,7 +128,7 @@ const ContactSection = () => {
               stroke="#51d2b9"
             />
           </svg>
-          <div className="   ml-auto     text-lg min-[375px]:text-[20px] min-[501px]:text-[25px]    ">
+          <div className="  ml-auto flex  translate-y-[-5rem]       flex-col text-lg min-[375px]:text-[20px] min-[501px]:text-[25px]   ">
             <ButtonAnimation>
               <a
                 href="mailto:nahomabrahamofficial@gmail.com  "

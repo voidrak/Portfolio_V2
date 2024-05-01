@@ -95,7 +95,7 @@ body {
 }
 
 #skills {
-  cursor: url("public/rocket-cursor.png "), auto;
+  cursor: url("/rocket-cursor.png "), auto;
 }
 
 @keyframes wobble {

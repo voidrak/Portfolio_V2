@@ -44,7 +44,7 @@ const ButtonAnimation = ({
       onMouseLeave={(e) => {
         handleMouesLeave(e);
       }}
-      className="relative my-4  flex w-[85%]  items-center justify-center overflow-hidden rounded-[3em] border border-[rgb(136,136,136)] px-[60px]  py-[15px] hover:text-black  "
+      className="relative my-4  flex w-[85%]  items-center justify-center overflow-hidden rounded-[3em] border border-[rgb(136,136,136)] px-[60px]    hover:text-black  "
       // style={{ backgroundColor }}
       {...attributes}
     >
