@@ -87,7 +87,7 @@ export const MacbookScroll = ({
   return (
     <div
       ref={ref}
-      className="debug flex min-h-[100vh] flex-shrink-0 scale-[0.5] transform flex-col  items-center justify-start overflow-hidden from-slate-900 via-slate-800 to-blue-900 py-0 [perspective:800px] sm:scale-50 md:min-h-[200vh] md:translate-y-[-10rem] md:scale-100  md:bg-gradient-to-br md:py-80  "
+      className=" flex min-h-[100vh] flex-shrink-0 scale-[0.5] transform flex-col items-center  justify-start from-slate-900  via-slate-800 to-blue-900 py-0 [perspective:800px] sm:scale-50 md:min-h-[200vh] md:translate-y-[-10rem] md:scale-100 md:overflow-y-hidden  md:bg-gradient-to-br md:py-80  "
     >
       <motion.div
         style={{
@@ -184,11 +184,7 @@ export const Lid = ({
             boxShadow: "0px 2px 0px 2px var(--neutral-900) inset",
           }}
           className="absolute inset-0 flex items-center justify-center rounded-lg bg-[#010101]"
-        >
-          {/* <span className="text-white">
-            <AceternityLogo />
-          </span> */}
-        </div>
+        ></div>
       </div>
       <motion.div
         style={{
