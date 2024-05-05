@@ -28,6 +28,7 @@ const NavigationBar = () => {
   }, [cartOutsideClicked]);
 
   const navBarLink = [
+    { title: "Home", href: "#home" },
     { title: "About", href: "#about" },
     { title: "Project", href: "#project" },
     { title: "Skills", href: "#skills" },
