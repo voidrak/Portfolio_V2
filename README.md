@@ -6,7 +6,7 @@
 
 <h2>🚀 Demo</h2>
 
- <a href="https://rakportfoliov2.vercel.app/](https://rakportfoliov2.vercel.app/">LINK</> [)
+ <a href="https://rakportfoliov2.vercel.app">LINK</>  
 
 <h2>Project Screenshots:</h2>
 
