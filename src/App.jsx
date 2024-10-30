@@ -3,6 +3,7 @@ import { ReactLenis, useLenis } from "lenis/react";
 import { twMerge } from "tailwind-merge";
 import HeroSection from "./Components/HeroSection/HeroSection";
 import { TracingBeam } from "./Components/ui/tracing-beam";
+import { Analytics } from "@vercel/analytics/react";
 
 import "./App.css";
 
