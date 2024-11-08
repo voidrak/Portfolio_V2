@@ -92,43 +92,7 @@ const ContactSection = () => {
         </motion.div>
         {isInContact && <Cursor isInText={isInText} />}
         <div className="   relative  mx-auto mt-16  flex w-full max-w-[1200px] translate-y-[-10vh]  flex-col  pr-4 max-[500px]:mt-[10rem] md:translate-y-[-5vh]  min-[1700px]:translate-y-0 ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="size-[80px] md:ml-[2vw] md:translate-x-[2rem] lg:size-[100px]  lg:translate-x-[10rem] xl:size-[120px]"
-          >
-            <motion.path
-              ref={svgRef}
-              variants={svgVariants}
-              initial="hidden"
-              animate={svgControls}
-              stroke="none"
-              d="M0 0h24v24H0z"
-              fill="none"
-            />
-            <motion.path
-              ref={svgRef}
-              variants={svgVariants}
-              initial="hidden"
-              animate={svgControls}
-              d="M7 7l10 10"
-              stroke="#51d2b9"
-            />
-            <motion.path
-              ref={svgRef}
-              variants={svgVariants}
-              initial="hidden"
-              animate={svgControls}
-              d="M17 8l0 9l-9 0"
-              stroke="#51d2b9"
-            />
-          </svg>
-          <div className="  ml-auto flex  translate-y-[-5rem]       flex-col text-lg min-[375px]:text-[20px] min-[501px]:text-[25px]   ">
+          <div className="  ml-auto flex flex-col text-lg min-[375px]:text-[20px] min-[501px]:text-[25px]   ">
             <ButtonAnimation>
               <a
                 href="mailto:nahomabrahamofficial@gmail.com  "
