@@ -148,7 +148,7 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-10 px-4 py-8">
+      <div className="absolute bottom-0 left-10 px-4 py-8 ">
         <h1 className="my-4 text-xl uppercase text-text-color-light">
           Socials
         </h1>

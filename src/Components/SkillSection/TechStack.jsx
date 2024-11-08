@@ -91,8 +91,8 @@ const TechStack = () => {
           <div className="flex flex-col items-center">
             <h1 className="text-2xl text-text-color-bold"> Languages</h1>
             <div className=" mt-8 flex w-[90vw] max-w-[560px]  flex-wrap  justify-center   ">
-              {techLanguages.map((item) => (
-                <MagneticAnimation>
+              {techLanguages.map((item, index) => (
+                <MagneticAnimation key={index}>
                   <img
                     src={item.imgSrc}
                     alt={item.title}
@@ -117,6 +117,13 @@ const TechStack = () => {
               <MagneticAnimation>
                 <img
                   src=" https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=plastic&logo=tailwind-css&logoColor=white "
+                  alt=" tailwindcss "
+                  className=" mx-11  my-5 scale-x-[1.8] scale-y-[2]  "
+                />
+              </MagneticAnimation>
+              <MagneticAnimation>
+                <img
+                  src=" https://img.shields.io/badge/laravel-f9322c.svg?style=plastic&logo=laravel&logoColor=white "
                   alt=" tailwindcss "
                   className=" mx-11  my-5 scale-x-[1.8] scale-y-[2]  "
                 />
