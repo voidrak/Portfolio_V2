@@ -32,7 +32,7 @@ const SVGComponent = () => {
             initial="initial"
             animate="animate"
             id="B"
-            transform="translate(36, 33)"
+            transform="translate(31, 33)"
             fill="#64FFDA"
             fontFamily="system-ui,Calibre-Medium, Calibre,sans-serif"
             fontSize={50}
@@ -41,7 +41,7 @@ const SVGComponent = () => {
           >
             <text>
               <tspan x={0.141666985} y={33}>
-                {"R"}
+                {"N"}
               </tspan>
             </text>
           </motion.g>
