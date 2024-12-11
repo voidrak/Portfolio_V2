@@ -1,16 +1,18 @@
 const projectData = [
+
   {
-    title: "  Portfolio V1",
+    title: "Sodere-Store ",
     description:
-      "This is where it all began! My very first Portfolio project. It's like my online home, made with love using HTML, CSS, and just a sprinkle of JavaScript. Here, you'll find a little glimpse into my journey as a budding web developer. It's simple, it's cozy, and it's where my adventure into the world of web development started ",
+      "Sodere Store an e-commerce platform offering a diverse range of products both locally in Ethiopia and internationally has undergone a complete makeover. Recognizing the need for a modern and clean UI I took on the challenge to redesign and rebuild the website from scratch. Using React.js and Tailwind CSS I've created a sleek and contemporary interface that not only looks great but also offers a seamless user experience.",
     shortDescription:
-      "My first  Portfolio built using html , css  and little JS  ",
-    link: "rock.jpg",
-    imgSrc: "projectImages/portofolio.png",
-    color: "#BBACAF",
-    demo: "https://voidrak.github.io/",
-    sourceCode: "https://github.com/voidrak/voidrak.github.io",
+      "A complete makeover of Sodere Store an e-commerce platform",
+    link: "house.jpg",
+    imgSrc: "projectImages/soder_store_screenshot_3.png",
+    color: "#316164",
+    demo: "https://sodere-store.vercel.app/",
+    sourceCode: "https://github.com/voidrak/Sodere-Store",
   },
+
   {
     title: "ETHIOFLIX",
     description:
@@ -20,7 +22,7 @@ const projectData = [
     link: "tree.jpg",
     imgSrc: "projectImages/ethioflix.png",
     color: "#977F6D",
-    demo: "https://ethioflixx.vercel.app/",
+    demo: "https://ethioflixx.vercel.app/home",
     sourceCode: "https://github.com/voidrak/EthioFlix",
   },
   {
@@ -36,7 +38,19 @@ const projectData = [
     sourceCode: "https://github.com/voidrak/Vist-Ethiopia",
   },
   {
-    title: "Monstercat -Website Clone",
+    title: "  Portfolio V1",
+    description:
+      "This is where it all began! My very first Portfolio project. It's like my online home, made with love using HTML, CSS, and just a sprinkle of JavaScript. Here, you'll find a little glimpse into my journey as a budding web developer. It's simple, it's cozy, and it's where my adventure into the world of web development started ",
+    shortDescription:
+      "My first  Portfolio built using html , css  and little JS  ",
+    link: "rock.jpg",
+    imgSrc: "projectImages/portofolio.png",
+    color: "#BBACAF",
+    demo: "https://voidrak.github.io/Portfolio-V1/",
+    sourceCode: "https://github.com/voidrak/voidrak.github.io",
+  },
+  {
+    title: "Monstercat  Clone",
     description:
       "Is a recreation of the a single page from renowned website MONSTERCAT aiming to deliver a similar experience project represents an exciting journey of learning and enjoyment. Throughout the development process I have acquired new skills and knowledge expanding my understanding of web development and user experience design.",
     shortDescription:
@@ -60,17 +74,6 @@ const projectData = [
   //   demo: "https://abstract-clone-woad.vercel.app/",
   //   sourceCode: "https://github.com/voidrak/Abstract-Clone",
   // },
-  {
-    title: "Sodere-Store ",
-    description:
-      "Sodere Store an e-commerce platform offering a diverse range of products both locally in Ethiopia and internationally has undergone a complete makeover. Recognizing the need for a modern and clean UI I took on the challenge to redesign and rebuild the website from scratch. Using React.js and Tailwind CSS I've created a sleek and contemporary interface that not only looks great but also offers a seamless user experience.",
-    shortDescription:
-      "A complete makeover of Sodere Store an e-commerce platform",
-    link: "house.jpg",
-    imgSrc: "projectImages/soder_store_screenshot_3.png",
-    color: "#316164",
-    demo: "https://github.com/voidrak/Sodere-Store",
-    sourceCode: "https://sodere-store.vercel.app/",
-  },
+
 ];
 export default projectData;

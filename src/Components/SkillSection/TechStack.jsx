@@ -123,6 +123,13 @@ const TechStack = () => {
               </MagneticAnimation>
               <MagneticAnimation>
                 <img
+                  src="https://img.shields.io/badge/vue-4FC08D.svg?style=plastic&logo=vue.js&logoColor=white"
+                  alt="vuejs"
+                  className="mx-11 my-5 scale-x-[1.8] scale-y-[2]"
+                />
+              </MagneticAnimation>
+              <MagneticAnimation>
+                <img
                   src=" https://img.shields.io/badge/laravel-f9322c.svg?style=plastic&logo=laravel&logoColor=white "
                   alt=" tailwindcss "
                   className=" mx-11  my-5 scale-x-[1.8] scale-y-[2]  "

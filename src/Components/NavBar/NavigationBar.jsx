@@ -15,7 +15,7 @@ const NavigationBar = () => {
     if (isHovered) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "hidden";
     }
   }, [isHovered]);
 
@@ -68,7 +68,7 @@ const NavigationBar = () => {
       ref={navRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className=" fixed right-0 top-0 z-50 overscroll-contain "
+      className=" fixed right-0 top-0 z-50 n overscroll-contain "
     >
       <div
         onClick={() => {

@@ -195,13 +195,13 @@ const AboutSection = () => {
         className="  flex max-w-[860px] flex-wrap text-wrap  py-4 pb-[5rem] text-xl font-semibold text-text-color-light"
       >
         {wordArray.map((text, index) => (
-          <motion.span
+          <span
             variants={childVariant}
             key={index}
             className="mx-[2px] xl:text-3xl "
           >
             {text}
-          </motion.span>
+          </span>
         ))}
       </motion.div>
       <div className=" w-[250px] pb-5 text-xl text-white sm:ml-16">
