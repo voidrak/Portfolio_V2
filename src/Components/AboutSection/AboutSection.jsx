@@ -12,7 +12,7 @@ import ButtonAnimation from "../../utils/ButtonAnimation";
 const AboutSection = () => {
   const [sliderValue, setSliderValue] = useState(3);
   const [aboutText, setAboutText] = useState(
-    "I'm Nahom Abraham, a web developer and software engineering student at Kombolcha Institute of Technology. Since 2022, I've been designing and developing websites, always striving to learn and improve in the dynamic world of technology. Currently, I'm working with React and Tailwind",
+    "I'm Nahom Abraham, a web developer and software engineering student at Kombolcha Institute of Technology.  I've been designing and developing websites, always striving to learn and improve in the dynamic world of technology. Currently, I'm working with React and Tailwind",
   );
 
   const notify = () => toast.success("Thanks For Downloading ");
@@ -36,22 +36,22 @@ const AboutSection = () => {
       }
       case 2: {
         bioText =
-          "I'm Nahom Abraham, a web developer and software engineering student at Kombolcha Institute of Technology. My web development journey started in 2022, always eager to learn new tech";
+          "I'm Nahom Abraham, a full stack developer at qelemmeda technologies. My web development journey started in 2022, always eager to learn new tech";
         break;
       }
       case 3: {
         bioText =
-          "I'm Nahom Abraham, a web developer and software engineering student at Kombolcha Institute of Technology. Since 2022, I've been designing and developing websites, always striving to learn and improve in the dynamic world of technology. Currently, I'm working with React and Tailwind";
+          "I'm Nahom Abraham,  a full stack developer at qelemmeda technologies.  I've been designing and developing websites, always striving to learn and improve in the dynamic world of technology. Currently, I'm working with React and Tailwind";
         break;
       }
       case 4: {
         bioText =
-          "I'm Nahom Abraham, a web developer and software engineering student at Kombolcha Institute of Technology. My passion for web development began in 2022, and I've been designing and developing websites ever since. Coding, for me, is more than just a tool – it's a way to express myself. Since my first HTML 'Hello World' program, I've felt like I've found my comfort zone. The thrill of creating something new solidified this.Beyond code, I enjoy music and football.";
+          "I'm Nahom Abraham,  a full stack developer at qelemmeda technologies. My passion for web development began in 2022, and I've been designing and developing websites ever since. Coding, for me, is more than just a tool – it's a way to express myself. Since my first HTML 'Hello World' program, I've felt like I've found my comfort zone. The thrill of creating something new solidified this.Beyond code, I enjoy music and football.";
         break;
       }
       default: {
         bioText =
-          "I'm Nahom Abraham, a web developer and software engineering student at Kombolcha Institute of Technology. Since 2022, I've been designing and developing websites, always striving to learn and improve in the dynamic world of technology. Currently, I'm working with React and Tailwind";
+          "I'm Nahom Abraham,  a full stack developer at qelemmeda technologies.  I've been designing and developing websites, always striving to learn and improve in the dynamic world of technology. Currently, I'm working with React and Tailwind";
       }
     }
     setAboutText(bioText);
@@ -187,7 +187,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <motion.div
+      <div
         key={aboutText}
         variants={containerVariants}
         initial="hidden"
@@ -203,7 +203,7 @@ const AboutSection = () => {
             {text}
           </motion.span>
         ))}
-      </motion.div>
+      </div>
       <div className=" w-[250px] pb-5 text-xl text-white sm:ml-16">
         <a
           href="src/assets/Nahom_Abraham_Resume.pdf"
