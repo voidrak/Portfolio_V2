@@ -16,6 +16,39 @@ const TechStack = () => {
   const container = useRef(null);
   const controls = useAnimation();
 
+  const techLanguages = [
+    {
+      title: " JavaScript",
+      imgSrc:
+        "https://img.shields.io/badge/javascript-%23323330.svg?logo=javascript&logoColor=%23F7DF1E",
+    },
+    {
+      title: " c++",
+      imgSrc:
+        " https://img.shields.io/badge/C++-%2300599C.svg?logo=c%2B%2B&logoColor=white",
+    },
+    {
+      title: "css3",
+      imgSrc:
+        "https://img.shields.io/badge/Css-%231572B6.svg?logo=css3&logoColor=white ",
+    },
+    {
+      title: " html",
+      imgSrc:
+        "https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white ",
+    },
+    {
+      title: " java",
+      imgSrc:
+        " https://img.shields.io/badge/JAVA-%23ED8B00.svg?logo=openjdk&logoColor=white",
+    },
+    {
+      title: " Markdown",
+      imgSrc:
+        " https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white",
+    },
+  ];
+
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end start"],
@@ -58,49 +91,16 @@ const TechStack = () => {
           <div className="flex flex-col items-center">
             <h1 className="text-2xl text-text-color-bold"> Languages</h1>
             <div className=" mt-8 flex w-[90vw] max-w-[560px]  flex-wrap  justify-center   ">
-              <MagneticAnimation>
-                <img
-                  src="https://img.shields.io/badge/javascript-%23323330.svg?logo=javascript&logoColor=%23F7DF1E"
-                  alt="JavaScript"
-                  className=" mx-11  my-5 scale-x-[1.8] scale-y-[2]  "
-                />
-              </MagneticAnimation>
-
-              <MagneticAnimation>
-                <img
-                  src=" https://img.shields.io/badge/C++-%2300599C.svg?logo=c%2B%2B&logoColor=white "
-                  alt=" c++ "
-                  className=" mx-11  my-5 scale-x-[1.8] scale-y-[2]  "
-                />
-              </MagneticAnimation>
-              <MagneticAnimation>
-                <img
-                  src=" https://img.shields.io/badge/Css-%231572B6.svg?logo=css3&logoColor=white "
-                  alt="css3  "
-                  className=" mx-11  my-5 scale-x-[1.8] scale-y-[2]  "
-                />
-              </MagneticAnimation>
-              <MagneticAnimation>
-                <img
-                  src="https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white  "
-                  alt=" html "
-                  className=" mx-11  my-5 scale-x-[1.8] scale-y-[2]  "
-                />
-              </MagneticAnimation>
-              <MagneticAnimation>
-                <img
-                  src="  https://img.shields.io/badge/JAVA-%23ED8B00.svg?logo=openjdk&logoColor=white"
-                  alt=" java "
-                  className=" mx-11  my-5 scale-x-[1.8] scale-y-[2]  "
-                />
-              </MagneticAnimation>
-              <MagneticAnimation>
-                <img
-                  src=" https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white "
-                  alt="Markdown  "
-                  className=" mx-11  my-5 scale-x-[1.8] scale-y-[2]  "
-                />
-              </MagneticAnimation>
+              {techLanguages.map((item, index) => (
+                <MagneticAnimation key={index}>
+                  <img
+                    src={item.imgSrc}
+                    alt={item.title}
+                    key={item.title}
+                    className=" mx-11  my-5 scale-x-[1.8] scale-y-[2]  "
+                  />
+                </MagneticAnimation>
+              ))}
             </div>
           </div>
 
@@ -117,6 +117,20 @@ const TechStack = () => {
               <MagneticAnimation>
                 <img
                   src=" https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=plastic&logo=tailwind-css&logoColor=white "
+                  alt=" tailwindcss "
+                  className=" mx-11  my-5 scale-x-[1.8] scale-y-[2]  "
+                />
+              </MagneticAnimation>
+              <MagneticAnimation>
+                <img
+                  src="https://img.shields.io/badge/vue-4FC08D.svg?style=plastic&logo=vue.js&logoColor=white"
+                  alt="vuejs"
+                  className="mx-11 my-5 scale-x-[1.8] scale-y-[2]"
+                />
+              </MagneticAnimation>
+              <MagneticAnimation>
+                <img
+                  src=" https://img.shields.io/badge/laravel-f9322c.svg?style=plastic&logo=laravel&logoColor=white "
                   alt=" tailwindcss "
                   className=" mx-11  my-5 scale-x-[1.8] scale-y-[2]  "
                 />

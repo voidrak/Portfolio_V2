@@ -60,12 +60,36 @@ const ProjectCard = ({ project, i, progress, targetScale, range }) => {
           top: `calc(-10% +  ${i * 50}px)`,
         }}
       >
-        <h2 className="my-2 text-center text-[18px] font-bold sm:text-[28px] ">
-          {project.title}
-        </h2>
+        <div className="flex justify-around px-1">
+
+          <h2 className="my-2 text-center text-[18px] font-bold sm:text-[28px] ">
+            {project.title}
+          </h2>
+          <div className="my-2 ml-4 flex cursor-pointer items-center gap-x-4 font-semibold">
+            <div className="flex items-center">
+              <a
+                href={project.demo}
+                target="_blank"
+                className="cursor-pointer text-sm lg:text-[18px] font-bold text-black hover:scale-105  underline underline-offset-2"
+              >
+                Demo
+              </a>
+            </div>
+            <div>
+              <a
+                href={project.sourceCode}
+                target="_blank"
+                className=" cursor-pointer text-sm lg:text-[18px] font-bold text-black hover:scale-105  underline underline-offset-2  "
+              >
+                Code
+              </a>
+            </div>
+          </div>
+
+        </div>
         <div className="body grid items-center gap-y-4 px-2">
           <a
-            href={project.sourceCode}
+            href={project.demo}
             target="_blank"
             className="imageContainer relative mx-auto overflow-hidden rounded-lg"
           >
@@ -83,26 +107,6 @@ const ProjectCard = ({ project, i, progress, targetScale, range }) => {
             <p className="hidden text-base first-letter:text-[28px] sm:block">
               {project.description}
             </p>
-            <div className="my-2 ml-4 flex cursor-pointer items-center gap-x-4 font-semibold">
-              <div className="flex items-center">
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  className="cursor-pointer text-[14px] font-bold text-text-color-bold  underline underline-offset-2"
-                >
-                  Demo
-                </a>
-              </div>
-              <div>
-                <a
-                  href={project.sourceCode}
-                  target="_blank"
-                  className="t mt-2 cursor-pointer text-[14px] font-bold text-text-color-bold underline underline-offset-2"
-                >
-                  Code
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </motion.div>

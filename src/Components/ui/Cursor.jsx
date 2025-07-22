@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
-import { motion, useInView, useAnimation } from "framer-motion";
 
 const Cursor = ({ isInText }) => {
   const size = isInText ? 300 : 35;
@@ -20,7 +19,9 @@ const Cursor = ({ isInText }) => {
   };
 
   const moveCircle = (x, y) => {
-    gsap.set(circle.current, { x, y, xPercent: -50, yPercent: -50 });
+    if (circle.current) {
+      gsap.set(circle.current, { x, y, xPercent: -50, yPercent: -50 });
+    }
   };
 
   const animate = () => {
@@ -36,7 +37,7 @@ const Cursor = ({ isInText }) => {
     };
   }, []);
   return (
-    <motion.div
+    <div
       ref={circle}
       style={{
         width: size,

@@ -87,7 +87,7 @@ export const MacbookScroll = ({
   return (
     <div
       ref={ref}
-      className="overflowY-hidden  flex min-h-[100vh] flex-shrink-0 scale-[0.5] transform  flex-col items-center justify-start from-slate-900 via-slate-800 to-blue-900 py-0 [perspective:800px] sm:scale-50 md:min-h-[200vh] md:translate-y-[-10rem] md:scale-100  md:bg-gradient-to-br md:py-80  "
+      className=" flex min-h-[100vh] flex-shrink-0 scale-[0.5] transform flex-col items-center  justify-start from-slate-900  via-slate-800 to-blue-900 py-0 [perspective:800px] sm:scale-50 md:min-h-[200vh] md:translate-y-[-10rem] md:scale-100 md:overflow-y-hidden  md:bg-gradient-to-br md:py-80  "
     >
       <motion.div
         style={{
@@ -184,11 +184,7 @@ export const Lid = ({
             boxShadow: "0px 2px 0px 2px var(--neutral-900) inset",
           }}
           className="absolute inset-0 flex items-center justify-center rounded-lg bg-[#010101]"
-        >
-          {/* <span className="text-white">
-            <AceternityLogo />
-          </span> */}
-        </div>
+        ></div>
       </div>
       <motion.div
         style={{
@@ -674,27 +670,6 @@ export const OptionKey = ({ className }: { className: string }) => {
         width="32"
         height="32"
         stroke="none"
-      />
-    </svg>
-  );
-};
-
-const AceternityLogo = () => {
-  return (
-    <svg
-      width="66"
-      height="65"
-      viewBox="0 0 66 65"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-3 w-3 text-white"
-    >
-      <path
-        d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-        stroke="currentColor"
-        strokeWidth="15"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="round"
       />
     </svg>
   );

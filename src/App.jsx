@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ReactLenis, useLenis } from "lenis/react";
 import { twMerge } from "tailwind-merge";
 import HeroSection from "./Components/HeroSection/HeroSection";
 import { TracingBeam } from "./Components/ui/tracing-beam";
+import { Analytics } from "@vercel/analytics/react";
 
 import "./App.css";
 
@@ -11,9 +12,19 @@ import ProjectSection from "./Components/Projects/ProjectSection";
 import NavigationBar from "./Components/NavBar/NavigationBar";
 import TechStack from "./Components/SkillSection/TechStack";
 import ContactSection from "./Components/Contact/ContactSection";
+import SVGComponent from "./Components/ui/SVGComponent";
 
 const App = () => {
-  return (
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
+
+  return loading ? (
+    <SVGComponent />
+  ) : (
     <ReactLenis root>
       <>
         <HeroSection />
@@ -25,7 +36,7 @@ const App = () => {
             <TechStack />
           </div>
         </TracingBeam>
-        {/* <CircleDivider /> */}
+
         <ContactSection />
       </>
     </ReactLenis>
