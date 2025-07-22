@@ -112,7 +112,7 @@ const AboutSection = () => {
             htmlFor="bio-length"
             className="whitespace-nowrap text-xl font-semibold text-text-color-bold"
           >
-            bio length
+            click to change   bio length
           </label>
 
           <svg
