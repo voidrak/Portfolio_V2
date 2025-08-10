@@ -70,7 +70,7 @@ const ProjectCard = ({ project, i, progress, targetScale, range }) => {
               <a
                 href={project.demo}
                 target="_blank"
-                className="cursor-pointer text-sm lg:text-[18px] font-bold text-black hover:scale-105  underline underline-offset-2"
+                className="cursor-pointer text-sm lg:text-[18px] font-bold text-white hover:scale-105  underline underline-offset-2"
               >
                 Demo
               </a>
@@ -79,7 +79,7 @@ const ProjectCard = ({ project, i, progress, targetScale, range }) => {
               <a
                 href={project.sourceCode}
                 target="_blank"
-                className=" cursor-pointer text-sm lg:text-[18px] font-bold text-black hover:scale-105  underline underline-offset-2  "
+                className={`cursor-pointer text-sm lg:text-[18px] font-bold text-white hover:scale-105  underline underline-offset-2 ${project.demo === "null" ? "hidden" : ""}`}
               >
                 Code
               </a>

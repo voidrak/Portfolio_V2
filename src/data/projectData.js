@@ -1,6 +1,30 @@
 const projectData = [
 
   {
+    title: "Tenadam ",
+    description:
+      "A full-featured telemedicine platform enabling patients to consult with doctors online, book appointments, manage medical records, and make secure payments. Includes real-time chat, video calls, and a robust, branded payment and receipt system.",
+    shortDescription:
+      "A Functional Telemedicine Platform for Online Doctor Consultations",
+    link: "house.jpg",
+    imgSrc: "projectImages/telemedicine.avif",
+    color: "#31c7a2",
+    demo: "null",
+    sourceCode: "https://github.com/RohaTech/Telemedicine-Web-App",
+  },
+  {
+    title: "GizeBet ",
+    description:
+      "Gizebet is a comprehensive project management platform designed to streamline and optimize project management activities for teams across various industries. With its powerful features for task management, progress tracking, team collaboration, resource allocation, and project planning.",
+    shortDescription:
+      "A comprehensive project management platform`",
+    link: "house.jpg",
+    imgSrc: "projectImages/gizebet.avif",
+    color: "#5e8ed6",
+    demo: "null",
+    sourceCode: "https://github.com/RohaTech/Project-Managment-Software",
+  },
+  {
     title: "Sodere-Store ",
     description:
       "Sodere Store an e-commerce platform offering a diverse range of products both locally in Ethiopia and internationally has undergone a complete makeover. Recognizing the need for a modern and clean UI I took on the challenge to redesign and rebuild the website from scratch. Using React.js and Tailwind CSS I've created a sleek and contemporary interface that not only looks great but also offers a seamless user experience.",
@@ -37,30 +61,30 @@ const projectData = [
     demo: "https://visit-ethio.vercel.app/",
     sourceCode: "https://github.com/voidrak/Vist-Ethiopia",
   },
-  {
-    title: "  Portfolio V1",
-    description:
-      "This is where it all began! My very first Portfolio project. It's like my online home, made with love using HTML, CSS, and just a sprinkle of JavaScript. Here, you'll find a little glimpse into my journey as a budding web developer. It's simple, it's cozy, and it's where my adventure into the world of web development started ",
-    shortDescription:
-      "My first  Portfolio built using html , css  and little JS  ",
-    link: "rock.jpg",
-    imgSrc: "projectImages/portofolio.png",
-    color: "#BBACAF",
-    demo: "https://voidrak.github.io/Portfolio-V1/",
-    sourceCode: "https://github.com/voidrak/voidrak.github.io",
-  },
-  {
-    title: "Monstercat  Clone",
-    description:
-      "Is a recreation of the a single page from renowned website MONSTERCAT aiming to deliver a similar experience project represents an exciting journey of learning and enjoyment. Throughout the development process I have acquired new skills and knowledge expanding my understanding of web development and user experience design.",
-    shortDescription:
-      "The Clone of a website called Monstercat( but not the whole websites just one page)",
-    link: "water.jpg",
-    imgSrc: "projectImages/monstercat.png",
-    color: "#C2491D",
-    demo: "https://monstercat-clone-voidrak.vercel.app/",
-    sourceCode: "https://github.com/voidrak/Monstercat-Clone",
-  },
+  // {
+  //   title: "  Portfolio V1",
+  //   description:
+  //     "This is where it all began! My very first Portfolio project. It's like my online home, made with love using HTML, CSS, and just a sprinkle of JavaScript. Here, you'll find a little glimpse into my journey as a budding web developer. It's simple, it's cozy, and it's where my adventure into the world of web development started ",
+  //   shortDescription:
+  //     "My first  Portfolio built using html , css  and little JS  ",
+  //   link: "rock.jpg",
+  //   imgSrc: "projectImages/portofolio.png",
+  //   color: "#BBACAF",
+  //   demo: "https://voidrak.github.io/Portfolio-V1/",
+  //   sourceCode: "https://github.com/voidrak/voidrak.github.io",
+  // },
+  // {
+  //   title: "Monstercat  Clone",
+  //   description:
+  //     "Is a recreation of the a single page from renowned website MONSTERCAT aiming to deliver a similar experience project represents an exciting journey of learning and enjoyment. Throughout the development process I have acquired new skills and knowledge expanding my understanding of web development and user experience design.",
+  //   shortDescription:
+  //     "The Clone of a website called Monstercat( but not the whole websites just one page)",
+  //   link: "water.jpg",
+  //   imgSrc: "projectImages/monstercat.png",
+  //   color: "#C2491D",
+  //   demo: "https://monstercat-clone-voidrak.vercel.app/",
+  //   sourceCode: "https://github.com/voidrak/Monstercat-Clone",
+  // },
 
   // {
   //   title: "Abstract - Website Clone",
