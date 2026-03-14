@@ -88,7 +88,7 @@ const TechStack = () => {
         </div>
 
         <div className="xl:translate-x-[10rem]">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center bg-white/[0.03] backdrop-blur-sm rounded-xl border border-white/[0.08] p-6 shadow-glass">
             <h1 className="text-2xl text-text-color-bold"> Languages</h1>
             <div className=" mt-8 flex w-[90vw] max-w-[560px]  flex-wrap  justify-center   ">
               {techLanguages.map((item, index) => (
@@ -104,7 +104,7 @@ const TechStack = () => {
             </div>
           </div>
 
-          <div className="mt-8 flex flex-col items-center">
+          <div className="mt-8 flex flex-col items-center bg-white/[0.03] backdrop-blur-sm rounded-xl border border-white/[0.08] p-6 shadow-glass">
             <h1 className="text-2xl text-text-color-bold">Framework/Library</h1>
             <div className=" mt-8 flex w-[90vw] max-w-[560px]  flex-wrap  justify-center   ">
               <MagneticAnimation>
@@ -137,7 +137,7 @@ const TechStack = () => {
               </MagneticAnimation>
             </div>
           </div>
-          <div className="mt-8 flex flex-col items-center">
+          <div className="mt-8 flex flex-col items-center bg-white/[0.03] backdrop-blur-sm rounded-xl border border-white/[0.08] p-6 shadow-glass">
             <h1 className="text-2xl text-text-color-bold">Database</h1>
             <div className=" mt-8 flex w-[90vw] max-w-[560px]  flex-wrap  justify-center   ">
               <MagneticAnimation>
@@ -163,7 +163,7 @@ const TechStack = () => {
               </MagneticAnimation>
             </div>
           </div>
-          <div className="mt-8 flex flex-col items-center">
+          <div className="mt-8 flex flex-col items-center bg-white/[0.03] backdrop-blur-sm rounded-xl border border-white/[0.08] p-6 shadow-glass">
             <h1 className="text-2xl text-text-color-bold">Version Control</h1>
             <div className=" mt-8 flex w-[90vw] max-w-[560px]  flex-wrap  justify-center   ">
               <MagneticAnimation>
@@ -182,7 +182,7 @@ const TechStack = () => {
               </MagneticAnimation>
             </div>
           </div>
-          <div className="mt-8 flex flex-col items-center">
+          <div className="mt-8 flex flex-col items-center bg-white/[0.03] backdrop-blur-sm rounded-xl border border-white/[0.08] p-6 shadow-glass">
             <h1 className="text-2xl text-text-color-bold">Design</h1>
             <div className=" mt-8 flex w-[90vw] max-w-[560px]  flex-wrap  justify-center   ">
               <MagneticAnimation>

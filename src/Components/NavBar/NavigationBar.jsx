@@ -74,7 +74,7 @@ const NavigationBar = () => {
         onClick={() => {
           setIsNavOpen(!isNavOpen);
         }}
-        className=" fixed right-2 top-0 z-40 m-[20px] flex  h-[45px] w-[45px] items-center justify-center rounded-full bg-first-accent-color sm:h-[55px] sm:w-[55px] lg:h-[70px] lg:w-[70px]  xl:h-[80px] xl:w-[80px] "
+        className=" fixed right-2 top-0 z-40 m-[20px] flex  h-[45px] w-[45px] items-center justify-center rounded-full bg-first-accent-color/30 backdrop-blur-md border border-first-accent-color/40 shadow-glass sm:h-[55px] sm:w-[55px] lg:h-[70px] lg:w-[70px]  xl:h-[80px] xl:w-[80px] "
       >
         <div className={`  `}>
           <svg
@@ -102,7 +102,7 @@ const NavigationBar = () => {
             initial="initial"
             animate="enter"
             exit="exit"
-            className="h-[100vh] w-[100vw] max-w-[481px] bg-black  text-text-color-bold "
+            className="h-[100vh] w-[100vw] max-w-[481px] bg-black/40 backdrop-blur-xl border-l border-white/10  text-text-color-bold "
           >
             <div className="   flex justify-between p-[100px]">
               <div className="  mt-20 flex w-full flex-col gap-4 text-[56px]">

@@ -38,16 +38,16 @@ const projectData = [
   },
 
   {
-    title: "ETHIOFLIX",
+    title: "ClearSight Initiative",
     description:
-      "EthioFix is a dynamic web application built using React designed to provide a platform for Ethiopian movie enthusiasts. This user-friendly site offers a curated collection of Ethiopian movies allowing users to browse search and watch their favorite films with ease",
+      "A nonprofit website dedicated to improving vision care and eye health awareness in underserved communities across Ethiopia. Built with Vue.js, the site features a modern design with donation integration, impact stories, and a clean user experience that effectively communicates the organization's mission of providing affordable reading glasses.",
     shortDescription:
-      "EthioFix is a dynamic Ethiopian movie site  built using React ",
+      "A nonprofit website for improving vision care in underserved Ethiopian communities",
     link: "tree.jpg",
-    imgSrc: "projectImages/ethioflix.png",
+    imgSrc: "projectImages/clearsight.png",
     color: "#977F6D",
-    demo: "https://ethioflixx.vercel.app/home",
-    sourceCode: "https://github.com/voidrak/EthioFlix",
+    demo: "https://clearsightinitiative.org/",
+    sourceCode: "https://github.com/voidrak",
   },
   {
     title: "Visit Ethiopia",

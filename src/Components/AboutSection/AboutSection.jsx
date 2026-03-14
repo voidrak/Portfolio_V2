@@ -192,7 +192,7 @@ const AboutSection = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="  flex max-w-[860px] flex-wrap text-wrap  py-4 pb-[5rem] text-xl font-semibold text-text-color-light"
+        className="  flex max-w-[860px] flex-wrap text-wrap  py-4 pb-[5rem] text-xl font-semibold text-text-color-light bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/[0.08] p-6 shadow-glass"
       >
         {wordArray.map((text, index) => (
           <span
