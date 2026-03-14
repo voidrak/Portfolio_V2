@@ -53,16 +53,15 @@ const ProjectCard = ({ project, i, progress, targetScale, range }) => {
       className="cardContainer sticky top-7 flex h-[90vh] translate-x-1 items-center justify-center"
     >
       <motion.div
-        className={`card relative mx-auto flex  w-[100%] max-w-[900px]  translate-x-2 flex-col rounded-2xl md:min-h-[500px] lg:min-h-[600px] `}
+        className={`card relative mx-auto flex  w-[100%] max-w-[900px]  translate-x-2 flex-col rounded-2xl md:min-h-[500px] lg:min-h-[600px] bg-black/40 backdrop-blur-xl border border-white/[0.08] shadow-glass `}
         style={{
           scale,
-          backgroundColor: project.color,
           top: `calc(-10% +  ${i * 50}px)`,
         }}
       >
         <div className="flex justify-around px-1">
 
-          <h2 className="my-2 text-center text-[18px] font-bold sm:text-[28px] ">
+          <h2 className="my-2 text-center text-[18px] font-bold sm:text-[28px] text-text-color-bold ">
             {project.title}
           </h2>
           <div className="my-2 ml-4 flex cursor-pointer items-center gap-x-4 font-semibold">
@@ -70,7 +69,7 @@ const ProjectCard = ({ project, i, progress, targetScale, range }) => {
               <a
                 href={project.demo}
                 target="_blank"
-                className="cursor-pointer text-sm lg:text-[18px] font-bold text-white hover:scale-105  underline underline-offset-2"
+                className="cursor-pointer text-sm lg:text-[18px] font-bold text-first-accent-color hover:scale-105 hover:text-white underline underline-offset-2 transition-colors"
               >
                 Demo
               </a>
@@ -79,7 +78,7 @@ const ProjectCard = ({ project, i, progress, targetScale, range }) => {
               <a
                 href={project.sourceCode}
                 target="_blank"
-                className={`cursor-pointer text-sm lg:text-[18px] font-bold text-white hover:scale-105  underline underline-offset-2 ${project.demo === "null" ? "hidden" : ""}`}
+                className={`cursor-pointer text-sm lg:text-[18px] font-bold text-first-accent-color hover:scale-105 hover:text-white underline underline-offset-2 transition-colors ${project.demo === "null" ? "hidden" : ""}`}
               >
                 Code
               </a>
@@ -101,10 +100,10 @@ const ProjectCard = ({ project, i, progress, targetScale, range }) => {
             />
           </a>
           <div className="description">
-            <p className="text-base first-letter:text-[28px] sm:hidden">
+            <p className="text-base text-text-color-light first-letter:text-[28px] sm:hidden">
               {project.shortDescription}
             </p>
-            <p className="hidden text-base first-letter:text-[28px] sm:block">
+            <p className="hidden text-base text-text-color-light first-letter:text-[28px] sm:block">
               {project.description}
             </p>
           </div>

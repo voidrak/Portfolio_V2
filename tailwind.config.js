@@ -21,7 +21,10 @@ module.exports = {
       fontFamily:{
         LockerRoom: ["LockerRoom","serif"], 
       },
-      boxShadow:{'box-shadow':' 0px 60px 50px rgba(0, 0, 0, 0.748)'},
+      boxShadow:{
+        'box-shadow':' 0px 60px 50px rgba(0, 0, 0, 0.748)',
+        'glass': '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 0 0.5px rgba(255, 255, 255, 0.05)',
+      },
       fontSize:{ 'text-clamp': "clamp(3rem, 5vw, 96px)",},
       keyframes:{
         highlighter: {
